@@ -1,0 +1,41 @@
+---
+layout: jbossorg
+title: Project Page
+---
+/ =========================Masthead=========================
+%header.jumbotron.subhead#overview
+	.row
+		.span6
+			%h1 My Project
+			%p.lead The best project in the world.
+	.subnav
+		%ul.nav.nav-pills
+			%li<
+				%a(href="#typography") Overview
+			%li<
+				%a(href="#navbar") Downloads
+			%li<
+				%a(href="#buttons") Documentation
+			%li.dropdown
+				%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+					=precede 'Community ' do
+						%b.caret>
+				%ul.dropdown-menu
+					%li<
+						%a(href="#") Wiki
+					%li<
+						%a(href="#") User Forum
+					%li<
+						%a(href="#") Mailing Lists
+					%li<
+						%a(href="#") Chat
+					%li<
+						%a(href="#") Blog
+					%li<
+						%a(href="#") Twitter
+			%li<
+				%a(href="#forms") Issue Tracker
+			%li<
+				%a(href="#forms") Source Code
+			%li<
+				%a(href="#forms") Build

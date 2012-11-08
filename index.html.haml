@@ -1,6 +1,265 @@
----
-layout: base
-title: Page title - or remove this line to use the project's default value
----
+!!! 5
+%html(lang="en")
+	%head
+		%meta(charset="utf-8")
+		%meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		%meta(name="description" content="Free themes for Twitter Bootstrap.")
+		%title Bootswatch: Free themes for Twitter Bootstrap
 
-%h1 You're awestruct.
+		/[if lt IE 9]
+			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+		%link(href="../stylesheets/styles.css" rel="stylesheet")
+		%link(href="../stylesheets/bootswatch.css" rel="stylesheet")
+		%link(href="http://feeds.feedburner.com/bootswatch" rel="alternate" type="application/rss+xml" title="Bootswatch")
+
+	%body
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					%a.brand(href="./") Bootswatch
+					.nav-collapse#main-menu
+
+		.container
+			.hero-unit
+				%h1 Bootswatch
+				%p#tagline &nbsp;
+
+				.social
+					.span4.github
+						%iframe(src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px")
+						%iframe(src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px")
+					.span4.twitter
+						%a.twitter-follow-button(href="https://twitter.com/thomashpark" data-show-count="false" data-show-screen-name="true") Follow @thomashpark
+						%a.twitter-share-button(href="https://twitter.com/share" data-url="http://bootswatch.com" data-via="thomashpark") Tweet
+					.span1.rss
+						%a.btn.rss-button(href="http://feeds.feedburner.com/bootswatch")<
+							%i.icon-rss>
+							%span RSS
+
+			.row
+				.span12
+					#ticker
+
+			.row.about
+				.span4
+					%img.glyph(src="../images/glyphicons_036_file.png")
+					%h3 Easy to Install
+					%p Simply download a CSS file and replace the one in Bootstrap. No messing around with hex values.
+				.span4
+					%img.glyph(src="../images/glyphicons_341_github.png")
+					%h3 Open Source
+					:markdown
+						Bootstrap themes are licensed under Apache 2.0 and maintained by the community on [GitHub](https://github.com/thomaspark/bootswatch).
+				.span4
+					%img.glyph(src="../images/glyphicons_280_settings.png")
+					%h3 Tuned for 2.1.1
+					:markdown
+						Swatches are built for and tested with the latest version of Bootstrap. [Older versions](https://github.com/thomaspark/bootswatch/downloads) are also available for download.
+				.span4
+					%img.glyph(src="../images/glyphicons_023_cogwheels.png")
+					%h3 Modular
+					%p Changes are contained in just two LESS files, enabling modification and ensuring forward compatibility.
+				.span4
+					%img.glyph(src="../images/glyphicons_265_electrical_plug.png")
+					%h3 Get Plugged In
+					:markdown
+						An <a data-toggle="modal" href="#api">API</a> is available for integrating with your platform. In use by [WPBS](http://320press.com/wpbs/), [FusionLeaf](http://www.fusionleaf.com/), [BootSnap](http://yabdab.com/stacks/snaps/bootsnap/), and others.
+				.span4
+					%img.glyph(src="../images/glyphicons_032_wifi_alt.png")
+					%h3 Stay Updated
+					:markdown
+						Be notified about updates by subscribing via [RSS Feed](http://feeds.feedburner.com/bootswatch), [email](http://feedburner.google.com/fb/a/mailverify?uri=bootswatch&loc=en_US), or [Tumblr](http://news.bootswatch.com).
+
+			.modal.hide.fade#api
+				.modal-header
+					%a.close(data-dismiss="modal") ×
+					%h3 API
+				.modal-body
+					%h4 Request
+					:markdown
+						Send your request to `http://api.bootswatch.com`.
+					%h4 Response
+					:markdown
+						This returns a `themes` array, and each theme has the following properties: `name`, `description`, `preview`, `thumbnail`, `css`, `cssMin`, `less`, and `lessVariables`.
+					%h4 Demo
+					:markdown
+						A [simple example](http://jsbin.com/asowud/1/edit), using [mustache.js](https://github.com/janl/mustache.js) for templating.
+					%h4 Credits
+					:markdown
+						Thanks to [James Taylor](http://jostylr.tumblr.com/) for [cors-lite](https://github.com/jostylr/cors-lite).
+				.modal-footer
+					%a.btn(href="#" data-dismiss="modal") Close
+
+			.row
+				.span12
+					%h1#gallery Gallery
+
+			.row
+				.span4
+					.thumbnail
+						%a(href="amelia")<
+							%img(src="amelia/thumbnail.png" alt="Amelia")
+						.caption
+							%h3 Amelia
+							%p Sweet and cheery.
+							.btn-toolbar
+								.btn-group<
+									%a.btn.btn-large(href="amelia") Preview
+								.btn-group
+									%a.btn.btn-large.btn-primary(target="_blank" href="amelia/bootstrap.min.css") Download
+									%a.btn.btn-large.btn-primary.dropdown-toggle(data-toggle="dropdown" href="#")
+										%span.caret
+									%ul.dropdown-menu
+										%li<
+											%a(target="_blank" href="amelia/bootstrap.min.css") bootstrap.min.css
+										%li<
+											%a(target="_blank" href="amelia/bootstrap.css") bootstrap.css
+										%li.divider
+										%li<
+											%a(target="_blank" href="amelia/variables.less") variables.less
+										%li<
+											%a(target="_blank" href="amelia/bootswatch.less") bootswatch.less
+
+				.span4
+					.thumbnail
+						%a(href="cerulean")<
+							%img(src="cerulean/thumbnail.png" alt="Cerulean")
+						.caption
+							%h3 Cerulean
+							%p A calm, blue sky.
+							.btn-toolbar
+								.btn-group<
+									%a.btn.btn-large(href="cerulean") Preview
+								.btn-group
+									%a.btn.btn-large.btn-primary(target="_blank" href="cerulean/bootstrap.min.css") Download
+									%a.btn.btn-large.btn-primary.dropdown-toggle(data-toggle="dropdown" href="#")
+										%span.caret
+									%ul.dropdown-menu
+										%li<
+											%a(target="_blank" href="cerulean/bootstrap.min.css") bootstrap.min.css
+										%li<
+											%a(target="_blank" href="cerulean/bootstrap.css") bootstrap.css
+										%li.divider
+										%li<
+											%a(target="_blank" href="cerulean/variables.less") variables.less
+										%li<
+											%a(target="_blank" href="cerulean/bootswatch.less") bootswatch.less
+
+				.span4
+					.thumbnail
+						%a(href="cyborg")<
+							%img(src="cyborg/thumbnail.png" alt="Cyborg")
+						.caption
+							%h3 Cyborg
+							%p Jet black and electric blue.
+							.btn-toolbar
+								.btn-group<
+									%a.btn.btn-large(href="cyborg") Preview
+								.btn-group
+									%a.btn.btn-large.btn-primary(target="_blank" href="cyborg/bootstrap.min.css") Download
+									%a.btn.btn-large.btn-primary.dropdown-toggle(data-toggle="dropdown" href="#")
+										%span.caret
+									%ul.dropdown-menu
+										%li<
+											%a(target="_blank" href="cyborg/bootstrap.min.css") bootstrap.min.css
+										%li<
+											%a(target="_blank" href="cyborg/bootstrap.css") bootstrap.css
+										%li.divider
+										%li<
+											%a(target="_blank" href="cyborg/variables.less") variables.less
+										%li<
+											%a(target="_blank" href="cyborg/bootswatch.less") bootswatch.less
+
+				.span4
+					.thumbnail
+						%a(href="journal")<
+							%img(src="journal/thumbnail.png" alt="Journal")
+						.caption
+							%h3 Journal
+							%p Crisp like a new sheet of paper.
+							.btn-toolbar
+								.btn-group<
+									%a.btn.btn-large(href="journal") Preview
+								.btn-group
+									%a.btn.btn-large.btn-primary(target="_blank" href="journal/bootstrap.min.css") Download
+									%a.btn.btn-large.btn-primary.dropdown-toggle(data-toggle="dropdown" href="#")
+										%span.caret
+									%ul.dropdown-menu
+										%li<
+											%a(target="_blank" href="journal/bootstrap.min.css") bootstrap.min.css
+										%li<
+											%a(target="_blank" href="journal/bootstrap.css") bootstrap.css
+										%li.divider
+										%li<
+											%a(target="_blank" href="journal/variables.less") variables.less
+										%li<
+											%a(target="_blank" href="journal/bootswatch.less") bootswatch.less
+
+			.modal.hide.fade#modal-custom
+				.modal-header
+					%a.close(data-dismiss="modal") ×
+					%h3 Custom-Built Swatches and More
+				.modal-body
+					:markdown
+						Get a Bootstrap theme designed and developed from the ground up.  
+						Send inquiries to [hello@thomaspark.me](mailto:hello@thomaspark.me).
+				.modal-footer
+					%a.btn(href="#" data-dismiss="modal") Close
+
+			%hr
+
+			%footer#footer
+				%p.pull-right<
+					%a(href="#") Back to top
+				.links
+					%a(href="http://news.bootswatch.com") Blog
+					%a(href="http://feeds.feedburner.com/bootswatch") RSS
+					%a(href="https://twitter.com/thomashpark") Twitter
+					%a(href="https://github.com/thomaspark/bootswatch/") GitHub
+					%a(href="https://github.com/thomaspark/bootswatch/tree/master/swatchmaker") Swatchmaker
+					%a(data-toggle="modal" href="#api") API
+				:markdown
+					Made by [Thomas Park](http://thomaspark.me). Contact him [hello@thomaspark.me](mailto:hello@thomaspark.me).  
+					Code licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0).  
+					Based on [Bootstrap](http://twitter.github.com/bootstrap/). Hosted on [GitHub](http://pages.github.com/). Icons from [Glyphicons](http://glyphicons.com/). Web fonts from [Google](http://www.google.com/webfonts).
+
+		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+		%script(src="../javascripts/bootstrap-transition.js")
+		%script(src="../javascripts/bootstrap-alert.js")
+		%script(src="../javascripts/bootstrap-modal.js")
+		%script(src="../javascripts/bootstrap-dropdown.js")
+		%script(src="../javascripts/bootstrap-scrollspy.js")
+		%script(src="../javascripts/bootstrap-tab.js")
+		%script(src="../javascripts/bootstrap-tooltip.js")
+		%script(src="../javascripts/bootstrap-popover.js")
+		%script(src="../javascripts/bootstrap-button.js")
+		%script(src="../javascripts/bootstrap-collapse.js")
+		%script(src="../javascripts/bootstrap-carousel.js")
+		%script(src="../javascripts/bootstrap-typeahead.js")
+		%script(src="../javascripts/bootstrap-affix.js")
+		%script(src="../javascripts/application.js")
+		%script(src="../javascripts/bootswatch.js") 
+		%script
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		:javascript
+			var taglines = [
+				'Free themes for <a target="_blank" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>',
+				'Add color to your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site without touching a color picker',
+				'Saving the web from default <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a>'
+			];
+
+			var line = Math.floor((taglines.length) * Math.random());
+			$('#tagline').html(taglines[line]);
+
+			parseRSS('http://feeds.feedburner.com/bootswatch', function(d){
+				var h ='<strong>Recent updates:</strong> ';
+				for (var i = 0; i < 3; i++){
+					h = h + '<a href="' + d.entries[i].link + '" onclick="pageTracker._link(this.href); return false;">' + d.entries[i].title + '...</a>&nbsp;&nbsp;';
+				}
+				document.getElementById('ticker').innerHTML = h;
+			})

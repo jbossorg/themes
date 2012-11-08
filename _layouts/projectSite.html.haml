@@ -1,0 +1,62 @@
+!!! 5
+%html(lang="en")
+	%head
+		%title #{page.title}
+		= partial("head.html.haml")
+		%link(href="../../stylesheets/#{page.theme}/theme.css" rel="stylesheet")
+
+	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					%a.brand(href="../") My Project
+					.nav-collapse
+						%ul.nav#main-menu-left
+							%li<
+								%a(href="#") Overview
+							%li<
+								%a(href="#") Downloads
+							%li<
+								%a(href="#") Documentation
+							%li.dropdown
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'Community ' do
+										%b.caret>
+								%ul.dropdown-menu
+									%li<
+										%a(href="#") Wiki
+									%li<
+										%a(href="#") User Forum
+									%li<
+										%a(href="#") Mailing Lists
+									%li<
+										%a(href="#") Chat
+									%li<
+										%a(href="#") Blog
+									%li<
+										%a(href="#") Twitter
+							%li<
+								%a(href="#") Issue Tracker
+							%li<
+								%a(href="#") Source Code
+							%li<
+								%a(href="#") Build
+						%ul.nav.pull-right#main-menu-right
+							%li<
+								%a(rel="tooltip" target="_blank" href="#" title="JBoss Community")<
+									JBoss Community
+									%i.icon-share-alt>
+
+		.container
+			~ content
+
+			= partial("footer.html.haml")
+
+		/ ==========================JavaScript========================
+		/ Placed at the end of the document so the pages load faster
+		= partial("javascripts.html.haml")
+

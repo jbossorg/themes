@@ -1,0 +1,152 @@
+!!! 5
+%html(lang="en")
+	%head
+		%title #{page.title}
+		= partial("head.html.haml")
+		%link(href="../../stylesheets/#{page.theme}/theme.css" rel="stylesheet")
+
+	%body(data-spy="scroll" data-target=".subnav" data-offset="50")
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					%a.dropdown-toggle.brand(href="./index.html" data-toggle="dropdown")<
+						%img(src="../../images/jbosscommunitylogo_hori.png" alt="The JBoss Community")
+					%ul.dropdown-menu
+						%li<
+							%a(href="#") Blogs
+						%li<
+							%a(href="#") Tweets                
+						%li<
+							%a(href="#") Facebook                
+						%li<
+							%a(href="#") Twitter                
+						%li<
+							%a(href="#") LinkedIn                
+						%li<
+							%a(href="#") Vimeo                
+						%li<
+							%a(href="#") Asylum                
+						%li<
+							%a(href="#") Events                
+					.nav-collapse
+						%ul.nav              
+							%li.dropdown
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'GET STARTED ' do
+										%b.caret>
+								%ul.dropdown-menu
+									%li<
+										%a(href="#") Get Tool Kit (JBDS)
+									%li<
+										%a(href="#") Downloads                
+									%li<
+										%a(href="#") Documentation                
+									%li<
+										%a(href="#") Forums                
+									%li<
+										%a(href="#") Webinars                
+									%li<
+										%a(href="#") Articles                
+									%li<
+										%a(href="#") Books                
+							%li.dropdown
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'GET INVOLVED ' do
+										%b.caret>
+								%ul.dropdown-menu
+									%li<
+										%a(href="#") Wiki
+									%li<
+										%a(href="#") Discussions                
+									%li<
+										%a(href="#") Issue Tracker                
+									%li<
+										%a(href="#") Source Repositories                
+									%li<
+										%a(href="#") User Groups                
+									%li<
+										%a(href="#") Special Interest Groups                
+									%li<
+										%a(href="#") Report a Security Issue                
+							%li.dropdown
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'PROJECTS ' do
+										%b.caret>
+								%ul.dropdown-menu
+									%li<
+										%a(href="#") Application Server
+									%li<
+										%a(href="#") Web Server                
+									%li<
+										%a(href="#") GateIn                
+									%li<
+										%a(href="#") ESB                
+									%li<
+										%a(href="#") Drools                
+									%li<
+										%a(href="#") Hibernate                
+									%li<
+										%a(href="#") RichFaces               
+									%li<
+										%a(href="#") Tools               
+									%li<
+										%a(href="#") RHQ
+									%li.divider
+									%li<
+										%a(href="#") More...               
+							%li.dropdown
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'PRODUCTS ' do
+										%b.caret>
+								%ul.dropdown-menu
+									%li<
+										%a(href="#") Application Platform
+									%li<
+										%a(href="#") Web Platform                
+									%li<
+										%a(href="#") Portal Platform                
+									%li<
+										%a(href="#") SOA Platform                
+									%li<
+										%a(href="#") Business Rules Mgmt System                
+									%li<
+										%a(href="#") Data Services Platform                
+									%li<
+										%a(href="#") Web Framework Kit               
+									%li<
+										%a(href="#") Developer Studio               
+									%li<
+										%a(href="#") Operations Network
+									%li.divider
+									%li<
+										%a(href="#") More...
+					%ul.nav.pull-right
+						%li
+							.btn-group
+								%a.btn.dropdown-toggle(data-toggle="dropdown" href="#")
+									=succeed ' Username' do
+										%i.icon-user
+									%span.caret
+								%ul.dropdown-menu
+									%li<
+										%a(href="#") Profile
+									%li.divider
+									%li<
+										%a(href="#") Sign Out
+						%li.divider-vertical
+						%li
+							%form.navbar-search
+								%input.search-query(type="text" placeholder="Search")
+
+		.container
+			~ content
+
+			= partial("footer.html.haml")
+
+		/ ==========================JavaScript========================
+		/ Placed at the end of the document so the pages load faster
+		= partial("javascripts.html.haml")

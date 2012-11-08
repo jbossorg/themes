@@ -1,0 +1,68 @@
+---
+layout: jbossorg
+title: Less Base
+---
+/ ========================Masthead==========================
+%header.jumbotron.subhead#overview
+	%h1 This is the Jumbotron style
+	%p.lead This is the &quot;lead&quot; class that is used to <a href="#">make</a> the content larger. This works great as a secondary style to the Jumbotron so you can better market your project.
+	.subnav
+		%ul.nav.nav-pills
+			%li<
+				%a(href="#subnavname1") Subnav element #1
+			%li<
+				%a(href="#subnavname2") Subnav element #2
+			%li<
+				%a(href="#subnavname3") Subnav element #3
+			%li<
+				%a(href="#subnavname4") Subnav element #4
+
+/ ========================SAMPLE THREE COLUMNS==========================
+%section
+	.page-header
+		%h1 Sample three column H1 header
+	.row
+		.span4
+			%h3 Why use this style?
+			%p Maecenas ultrices risus eget ipsum vulputate facilisis. Cras fermentum pulvinar arcu a venenatis. Sed purus elit, condimentum rutrum dapibus nec, pretium a nunc.
+		.span4
+			%h3 This is the h3 style
+			%h4<
+				%a(href="#") Linked H4 Title
+			%p Maecenas ultrices risus eget ipsum vulputate facilisis. Cras fermentum pulvinar arcu a venenatis. Sed purus elit, condimentum rutrum dapibus nec, pretium a nunc.
+			%h4<
+				%a(href="#") Linked H4 Title
+			%p Maecenas ultrices risus eget ipsum vulputate facilisis. Cras fermentum pulvinar arcu a venenatis. Sed purus elit, condimentum rutrum dapibus nec, pretium a nunc.
+		.span4
+			%h3 Command line
+			%p This is the <code>pre</code> tag in use
+			%pre
+				$ lessc ./less/bootstrap.less > bootstrap.css
+
+/ =========================FULL WIDTH CONTENT=========================
+%section
+	.page-header
+		%h1 This is a large title <small>It has small text styles to provide contrast in marketing message</small>
+	%h3 This style is the H3 "table table-bordered table-striped"
+	%table.table.table-bordered.table-striped
+		%tbody
+			%tr
+				%th.span3 Header style
+				%th.span3 Header style
+				%th.span3 Header style
+				%th.span3 Header style
+			%tr
+				%td <code>Sample code style</code>
+				%td sample content in table
+				%td sample content in table
+				%td sample content in table
+			%tr
+				%td sample content in table
+				%td sample content in table
+				%td sample content in table
+				%td sample content in table
+			%tr
+				%td sample content in table
+				%td sample content in table
+				%td sample content in table
+				%td sample content in table
