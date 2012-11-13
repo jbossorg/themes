@@ -3,7 +3,7 @@
 	%head
 		%title #{page.title}
 		= partial("head.html.haml")
-		%link(href="../../stylesheets/#{page.theme}/theme.css" rel="stylesheet")
+		%link(href="#{site.base_url}/#{site.cssDir}/#{page.style}/styles.css" rel="stylesheet")
 
 	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
 		.navbar.navbar-fixed-top
@@ -59,4 +59,3 @@
 		/ ==========================JavaScript========================
 		/ Placed at the end of the document so the pages load faster
 		= partial("javascripts.html.haml")
-

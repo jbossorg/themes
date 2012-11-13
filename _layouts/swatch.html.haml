@@ -12,8 +12,8 @@
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
 		/ Styles
-		%link(href="../../stylesheets/#{page.theme}/theme.css" rel="stylesheet")
-		%link(href="../../stylesheets/docs.css" rel="stylesheet")
+		%link(href="#{site.base_url}/#{site.cssDir}/#{page.style}/styles.css" rel="stylesheet")
+		%link(href="#{site.base_url}/#{site.cssDir}/docs.css" rel="stylesheet")
 
 	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
 
@@ -48,14 +48,14 @@
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
-										%a(target="_blank" href="/stylesheets/#{page.theme}/styles.min.css") styles.min.css
+										%a(target="_blank" href="#{site.base_url}/#{site.cssDir}/#{page.style}/styles.min.css") styles.min.css
 									%li<
-										%a(target="_blank" href="/stylesheets/#{page.theme}/styles.css") styles.css
+										%a(target="_blank" href="#{site.base_url}/#{site.cssDir}/#{page.style}/styles.css") styles.css
 									%li.divider
 									%li<
-										%a(target="_blank" href="https://raw.github.com/newtonm/template/master/stylesheets/#{page.theme}/variables.scss") variables.scss
+										%a(target="_blank" href="https://raw.github.com/newtonm/template/master/stylesheets/#{page.style}/variables.scss") variables.scss
 									%li<
-										%a(target="_blank" href="https://raw.github.com/newtonm/template/master/stylesheets/#{page.theme}/enhancements.scss") enhancements.scss
+										%a(target="_blank" href="https://raw.github.com/newtonm/template/master/stylesheets/#{page.style}/enhancements.scss") enhancements.scss
 
 						%ul.nav.pull-right#main-menu-right
 							%li<
@@ -89,7 +89,7 @@
 							%ul.dropdown-menu
 								- page.links.each do |link|
 									%li<
-										%a(href="/#{page.theme}/#{link}.html") #{link}
+										%a(href="/#{page.style}/#{link}.html") #{link}
 
 			/ =========================Typography=========================
 			%section#typography
@@ -687,19 +687,19 @@
 
 		/ Placed at the end of the document so the pages load faster
 		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-		%script(src="../../javascripts/bootstrap-transition.js")
-		%script(src="../../javascripts/bootstrap-alert.js")
-		%script(src="../../javascripts/bootstrap-modal.js")
-		%script(src="../../javascripts/bootstrap-dropdown.js")
-		%script(src="../../javascripts/bootstrap-scrollspy.js")
-		%script(src="../../javascripts/bootstrap-tab.js")
-		%script(src="../../javascripts/bootstrap-tooltip.js")
-		%script(src="../../javascripts/bootstrap-popover.js")
-		%script(src="../../javascripts/bootstrap-button.js")
-		%script(src="../../javascripts/bootstrap-collapse.js")
-		%script(src="../../javascripts/bootstrap-carousel.js")
-		%script(src="../../javascripts/bootstrap-typeahead.js")
-		%script(src="../../javascripts/bootstrap-affix.js")
-		%script(src="../../javascripts/application.js")
-		%script(src="../../javascripts/bootswatch.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-transition.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-alert.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-modal.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-dropdown.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-scrollspy.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-tab.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-tooltip.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-popover.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-button.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-collapse.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-carousel.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-typeahead.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-affix.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/application.js")
+		%script(src="#{site.base_url}/#{site.jsDir}/bootswatch.js")
 		

@@ -3,7 +3,7 @@
 	%head
 		%title #{page.title}
 		= partial("head.html.haml")
-		%link(href="../../stylesheets/#{page.theme}/theme.css" rel="stylesheet")
+		%link(href="#{site.base_url}/#{site.cssDir}/#{page.style}/styles.css" rel="stylesheet")
 
 	%body(data-spy="scroll" data-target=".subnav" data-offset="50")
 		.navbar.navbar-fixed-top
@@ -13,117 +13,117 @@
 						%span.icon-bar
 						%span.icon-bar
 						%span.icon-bar
-					%a.dropdown-toggle.brand(href="./index.html" data-toggle="dropdown")<
-						%img(src="../../images/jbosscommunitylogo_hori.png" alt="The JBoss Community")
+					%a.dropdown-toggle.brand(href="#{site.links.home}" data-toggle="dropdown")<
+						%img(src="#{site.base_url}/#{site.imgDir}/#{site.tmDir}/jbosscommunitylogo_hori.png" alt="The JBoss Community")
 					%ul.dropdown-menu
 						%li<
-							%a(href="#") Blogs
+							%a(href="#{site.links.blogs}") Blogs
 						%li<
-							%a(href="#") Tweets                
+							%a(href="#{site.links.tweets}") Tweets                
 						%li<
-							%a(href="#") Facebook                
+							%a(href="#{site.links.facebook}") Facebook                
 						%li<
-							%a(href="#") Twitter                
+							%a(href="#{site.links.twitter}") Twitter                
 						%li<
-							%a(href="#") LinkedIn                
+							%a(href="#{site.links.linkedIn}") LinkedIn                
 						%li<
-							%a(href="#") Vimeo                
+							%a(href="#{site.links.vimeo}") Vimeo                
 						%li<
-							%a(href="#") Asylum                
+							%a(href="#{site.links.asylum}") Asylum                
 						%li<
-							%a(href="#") Events                
+							%a(href="#{site.links.events}") Events                
 					.nav-collapse
 						%ul.nav              
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.getStarted}")<
 									=precede 'GET STARTED ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
-										%a(href="#") Get Tool Kit (JBDS)
+										%a(href="#{site.links.getToolKit}") Get Tool Kit (JBDS)
 									%li<
-										%a(href="#") Downloads                
+										%a(href="#{site.links.downloads}") Downloads                
 									%li<
-										%a(href="#") Documentation                
+										%a(href="#{site.links.documentation}") Documentation                
 									%li<
-										%a(href="#") Forums                
+										%a(href="#{site.links.forums}") Forums                
 									%li<
-										%a(href="#") Webinars                
+										%a(href="#{site.links.webinars}") Webinars                
 									%li<
-										%a(href="#") Articles                
+										%a(href="#{site.links.articles}") Articles                
 									%li<
-										%a(href="#") Books                
+										%a(href="#{site.links.books}") Books                
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.getInvolved}")<
 									=precede 'GET INVOLVED ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
-										%a(href="#") Wiki
+										%a(href="#{site.links.wiki}") Wiki
 									%li<
-										%a(href="#") Discussions                
+										%a(href="#{site.links.discussions}") Discussions                
 									%li<
-										%a(href="#") Issue Tracker                
+										%a(href="#{site.links.issueTracker}") Issue Tracker                
 									%li<
-										%a(href="#") Source Repositories                
+										%a(href="#{site.links.sourceRepos}") Source Repositories                
 									%li<
-										%a(href="#") User Groups                
+										%a(href="#{site.links.userGroups}") User Groups                
 									%li<
-										%a(href="#") Special Interest Groups                
+										%a(href="#{site.links.sigs}") Special Interest Groups                
 									%li<
-										%a(href="#") Report a Security Issue                
+										%a(href="#{site.links.reportSecurityIssue}") Report a Security Issue                
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.projects}")<
 									=precede 'PROJECTS ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
-										%a(href="#") Application Server
+										%a(href="#{site.links.appServer}") Application Server
 									%li<
-										%a(href="#") Web Server                
+										%a(href="#{site.links.webServer}") Web Server                
 									%li<
-										%a(href="#") GateIn                
+										%a(href="#{site.links.gateIn}") GateIn                
 									%li<
-										%a(href="#") ESB                
+										%a(href="#{site.links.esb}") ESB                
 									%li<
-										%a(href="#") Drools                
+										%a(href="#{site.links.drools}") Drools                
 									%li<
-										%a(href="#") Hibernate                
+										%a(href="#{site.links.hibernate}") Hibernate                
 									%li<
-										%a(href="#") RichFaces               
+										%a(href="#{site.links.richfaces}") RichFaces               
 									%li<
-										%a(href="#") Tools               
+										%a(href="#{site.links.tools}") Tools               
 									%li<
-										%a(href="#") RHQ
+										%a(href="#{site.links.rhq}") RHQ
 									%li.divider
 									%li<
-										%a(href="#") More...               
+										%a(href="#{site.links.projects}") More...               
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.products}")<
 									=precede 'PRODUCTS ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
-										%a(href="#") Application Platform
+										%a(href="#{site.links.appPlatform}") Application Platform
 									%li<
-										%a(href="#") Web Platform                
+										%a(href="#{site.links.webPlatform}") Web Platform                
 									%li<
-										%a(href="#") Portal Platform                
+										%a(href="#{site.links.portalPlatform}") Portal Platform                
 									%li<
-										%a(href="#") SOA Platform                
+										%a(href="#{site.links.soaPlatform}") SOA Platform                
 									%li<
-										%a(href="#") Business Rules Mgmt System                
+										%a(href="#{site.links.brms}") Business Rules Mgmt System                
 									%li<
-										%a(href="#") Data Services Platform                
+										%a(href="#{site.links.dataServicesPlatform}") Data Services Platform                
 									%li<
-										%a(href="#") Web Framework Kit               
+										%a(href="#{site.links.wfk}") Web Framework Kit               
 									%li<
-										%a(href="#") Developer Studio               
+										%a(href="#{site.links.devStudio}") Developer Studio               
 									%li<
-										%a(href="#") Operations Network
+										%a(href="#{site.links.operationsNetwork}") Operations Network
 									%li.divider
 									%li<
-										%a(href="#") More...
+										%a(href="#{site.links.products}") More...
 					%ul.nav.pull-right
 						%li
 							.btn-group
