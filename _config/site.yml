@@ -6,7 +6,39 @@ fontsDir: fonts
 
 defaults:
   title: Default project page title
-	
+
+profiles:
+  production:
+    js_minifier: enabled
+    html_minifier: disabled
+    css_minifier: enabled
+    fileMerger:
+      enabled: true
+      outputFilePath: /javascripts/javascript.min.js
+      paths:
+        - /javascripts/jquery.js
+        - /javascripts/prettify.js
+        - /javascripts/bootstrap-transition.js
+        - /javascripts/bootstrap-alert.js
+        - /javascripts/bootstrap-modal.js
+        - /javascripts/bootstrap-dropdown.js
+        - /javascripts/bootstrap-scrollspy.js
+        - /javascripts/bootstrap-tab.js
+        - /javascripts/bootstrap-tooltip.js
+        - /javascripts/bootstrap-popover.js
+        - /javascripts/bootstrap-button.js
+        - /javascripts/bootstrap-collapse.js
+        - /javascripts/bootstrap-carousel.js
+        - /javascripts/bootstrap-typeahead.js
+        - /javascripts/application.js
+        - /javascripts/subnavstick.js
+  development:
+    js_minifier: disabled
+    css_minifier: disabled
+    html_minifier: disabled
+    fileMerger:
+      enabled: false
+
 links:
   home: http://www.jboss.org
   blogs: http://planet.jboss.org
