@@ -1,4 +1,5 @@
 %script(type="text/javascript" src="http://platform.twitter.com/widgets.js")
+
 - if !site.fileMerger.nil? and (site.fileMerger['enabled'].nil? or site.fileMerger['enabled'].to_s.eql?("true"))
     %script(src="#{site.base_url}/#{site.jsDir}/javascript.min.js")
 - else
@@ -16,5 +17,6 @@
     %script(src="#{site.base_url}/#{site.jsDir}/bootstrap-collapse.js")
     %script(src="#{site.base_url}/#{site.jsDir}/bootstrap-carousel.js")
     %script(src="#{site.base_url}/#{site.jsDir}/bootstrap-typeahead.js")
+    %script(src="#{site.base_url}/#{site.jsDir}/bootstrap-affix.js")
     %script(src="#{site.base_url}/#{site.jsDir}/application.js")
     %script(src="#{site.base_url}/#{site.jsDir}/subnavstick.js")

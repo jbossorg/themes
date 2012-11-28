@@ -53,7 +53,7 @@ $headingsColor:         $grayDarker; // empty to use BS default, $textColor
 // Tables
 // -------------------------
 $tableBackground:                   transparent; // overall background-color
-$tableBackgroundAccent:             #f9f9f9; // for striping
+$tableBackgroundAccent:             #F4F3F3; // for striping
 $tableBackgroundHover:              #f5f5f5; // for hover
 $tableBorder:                       #ddd; // table and cell border
 
@@ -79,7 +79,7 @@ $btnDangerBackground:               #e24d42;
 $btnDangerBackgroundHighlight:      #af423a;
 
 $btnInverseBackground:              $grayDark;
-$btnInverseBackgroundHighlight:     $black;
+$btnInverseBackgroundHighlight:     $grayDarker;
 
 // Forms
 // -------------------------
