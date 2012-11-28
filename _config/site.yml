@@ -30,6 +30,7 @@ profiles:
         - /javascripts/bootstrap-collapse.js
         - /javascripts/bootstrap-carousel.js
         - /javascripts/bootstrap-typeahead.js
+        - /javascripts/bootstrap-affix.js
         - /javascripts/application.js
         - /javascripts/subnavstick.js
   development:
