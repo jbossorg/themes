@@ -6,8 +6,7 @@ require 'uglifier'
 # If configured in project pipeline and site.yml, it will compress javascript files.
 #
 # Required installed gems:
-# - uglifyjs
-# - execjs
+# - uglifier (this has a runtime dependency on execjs)
 # - therubyracer
 #
 # Configuration:

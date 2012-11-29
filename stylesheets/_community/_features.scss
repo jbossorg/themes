@@ -1,0 +1,39 @@
+/* These are new selectors and styles created for unique uses on the site not covered by Bootstrap defaults. */
+
+/* ------------------ Project banner, tagline and tab ------------------------- */
+@media (min-width: 980px) {
+	.container {
+		padding-top: 0;
+	}
+}
+
+.banner {
+	position: relative;
+}
+
+.banner > a > img {
+	min-height: 35px;
+}
+
+.tagline {
+	color: #FFFFFF;
+	font-size: 23px;
+	letter-spacing: -1px;
+	position: absolute;
+	right: 40px;
+	bottom: 19px;
+	z-index: 100;
+}
+
+.tab {
+	position: absolute;
+	top: 0;
+	right: 70px;
+	z-index: 1000;
+}
+
+/* ------------------ Company logo ------------------------- */
+.company {
+	width: 76px;
+	margin: 6px auto;
+}

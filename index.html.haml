@@ -9,8 +9,8 @@
 		/[if lt IE 9]
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-		%link(href="#{site.base_url}/#{site.cssDir}/styles.css" rel="stylesheet")
-		%link(href="#{site.base_url}/#{site.cssDir}/bootswatch.css" rel="stylesheet")
+		%link(href="#{site.css_url}/styles.css" rel="stylesheet")
+		%link(href="#{site.css_url}/bootswatch.css" rel="stylesheet")
 		%link(href="http://feeds.feedburner.com/bootswatch" rel="alternate" type="application/rss+xml" title="Bootswatch")
 
 	%body
@@ -47,30 +47,30 @@
 
 			.row.about
 				.span4
-					%img.glyph(src="#{site.base_url}/#{site.imgDir}/glyphicons_036_file.png")
+					%img.glyph(src="#{site.img_url}/glyphicons_036_file.png")
 					%h3 Easy to Install
 					%p Simply download a CSS file and replace the one in Bootstrap. No messing around with hex values.
 				.span4
-					%img.glyph(src="#{site.base_url}/#{site.imgDir}/glyphicons_341_github.png")
+					%img.glyph(src="#{site.img_url}/glyphicons_341_github.png")
 					%h3 Open Source
 					:markdown
 						Bootstrap themes are licensed under Apache 2.0 and maintained by the community on [GitHub](https://github.com/thomaspark/bootswatch).
 				.span4
-					%img.glyph(src="#{site.base_url}/#{site.imgDir}/glyphicons_280_settings.png")
+					%img.glyph(src="#{site.img_url}/glyphicons_280_settings.png")
 					%h3 Tuned for 2.1.1
 					:markdown
 						Swatches are built for and tested with the latest version of Bootstrap. [Older versions](https://github.com/thomaspark/bootswatch/downloads) are also available for download.
 				.span4
-					%img.glyph(src="#{site.base_url}/#{site.imgDir}/glyphicons_023_cogwheels.png")
+					%img.glyph(src="#{site.img_url}/glyphicons_023_cogwheels.png")
 					%h3 Modular
 					%p Changes are contained in just two LESS files, enabling modification and ensuring forward compatibility.
 				.span4
-					%img.glyph(src="#{site.base_url}/#{site.imgDir}/glyphicons_265_electrical_plug.png")
+					%img.glyph(src="#{site.img_url}/glyphicons_265_electrical_plug.png")
 					%h3 Get Plugged In
 					:markdown
 						An <a data-toggle="modal" href="#api">API</a> is available for integrating with your platform. In use by [WPBS](http://320press.com/wpbs/), [FusionLeaf](http://www.fusionleaf.com/), [BootSnap](http://yabdab.com/stacks/snaps/bootsnap/), and others.
 				.span4
-					%img.glyph(src="#{site.base_url}/#{site.imgDir}/glyphicons_032_wifi_alt.png")
+					%img.glyph(src="#{site.img_url}/glyphicons_032_wifi_alt.png")
 					%h3 Stay Updated
 					:markdown
 						Be notified about updates by subscribing via [RSS Feed](http://feeds.feedburner.com/bootswatch), [email](http://feedburner.google.com/fb/a/mailverify?uri=bootswatch&loc=en_US), or [Tumblr](http://news.bootswatch.com).
@@ -229,21 +229,9 @@
 					Based on [Bootstrap](http://twitter.github.com/bootstrap/). Hosted on [GitHub](http://pages.github.com/). Icons from [Glyphicons](http://glyphicons.com/). Web fonts from [Google](http://www.google.com/webfonts).
 
 		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-transition.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-alert.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-modal.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-dropdown.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-scrollspy.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-tab.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-tooltip.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-popover.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-button.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-collapse.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-carousel.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-typeahead.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-affix.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/application.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootswatch.js") 
+		%script(src="#{site.js_url}/bootstrap-community.js")
+		%script(src="#{site.js_url}/application.js")
+		%script(src="#{site.js_url}/bootswatch.js") 
 		%script
 			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 		:javascript

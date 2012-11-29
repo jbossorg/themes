@@ -6,7 +6,7 @@
 # Configuration:
 #
 # 1. configure the extension in the project pipeline.rb:
-#    - add css_minifier dependency:
+#    - add file_merger dependency:
 #
 #      require 'file_merger'
 #

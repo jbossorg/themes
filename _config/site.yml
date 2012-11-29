@@ -1,44 +1,45 @@
-cssDir: stylesheets
-imgDir: images
-tmDir: trademarks
-jsDir: javascripts
-fontsDir: fonts
-
 defaults:
-  title: Default project page title
+  title: JBoss Community
+
+css_url: http://localhost:4242/stylesheets
+img_url: http://localhost:4242/images
+js_url: http://localhost:4242/javascripts
+fonts_url: http://localhost:4242/fonts
+
+css_minifier: enabled
+js_minifier: enabled
+html_minifier: enabled
+		
+fileMerger:
+  enabled: true
+  outputFilePath: /javascripts/bootstrap-community.js
+  paths:
+    - /javascripts/_bootstrap-affix.js
+    - /javascripts/_bootstrap-alert.js
+    - /javascripts/_bootstrap-button.js
+    - /javascripts/_bootstrap-carousel.js
+    - /javascripts/_bootstrap-collapse.js
+    - /javascripts/_bootstrap-dropdown.js
+    - /javascripts/_bootstrap-modal.js
+    - /javascripts/_bootstrap-popover.js
+    - /javascripts/_bootstrap-scrollspy.js
+    - /javascripts/_bootstrap-tab.js
+    - /javascripts/_bootstrap-tooltip.js
+    - /javascripts/_bootstrap-transition.js
+    - /javascripts/_bootstrap-typeahead.js
 
 profiles:
-  production:
-    js_minifier: enabled
-    html_minifier: disabled
-    css_minifier: enabled
-    fileMerger:
-      enabled: true
-      outputFilePath: /javascripts/javascript.min.js
-      paths:
-        - /javascripts/jquery.js
-        - /javascripts/prettify.js
-        - /javascripts/bootstrap-transition.js
-        - /javascripts/bootstrap-alert.js
-        - /javascripts/bootstrap-modal.js
-        - /javascripts/bootstrap-dropdown.js
-        - /javascripts/bootstrap-scrollspy.js
-        - /javascripts/bootstrap-tab.js
-        - /javascripts/bootstrap-tooltip.js
-        - /javascripts/bootstrap-popover.js
-        - /javascripts/bootstrap-button.js
-        - /javascripts/bootstrap-collapse.js
-        - /javascripts/bootstrap-carousel.js
-        - /javascripts/bootstrap-typeahead.js
-        - /javascripts/bootstrap-affix.js
-        - /javascripts/application.js
-        - /javascripts/subnavstick.js
   development:
-    js_minifier: disabled
     css_minifier: disabled
+    js_minifier: disabled
     html_minifier: disabled
-    fileMerger:
-      enabled: false
+  staging:
+  production:
+    base_url: http://design.jbossorg/boostrap/themes
+    css_url: http://static.jboss.org/theme/css
+    img_url: http://static.jboss.org/theme/images
+    js_url: http://static.jboss.org/theme/js
+    fonts_url: http://static.jboss.org/theme/fonts
 
 links:
   home: http://www.jboss.org

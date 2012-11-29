@@ -7,15 +7,13 @@
 		%meta(name="description" content="")
 		%meta(name="author" content="")
 
-		= partial('/javascripts.html.haml')
-
 		/ HTML5 shim, for IE6-8 support of HTML elements
 		/[if lt IE 9]
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
 		/ Styles
-		%link(href="#{site.base_url}/#{site.cssDir}/#{page.style}/styles.css" rel="stylesheet")
-		%link(href="#{site.base_url}/#{site.cssDir}/docs.css" rel="stylesheet")
+		%link(href="#{site.css_url}/bootstrap-#{page.style}.css" rel="stylesheet")
+		%link(href="#{site.css_url}/docs.css" rel="stylesheet")
 
 	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
 
@@ -84,14 +82,8 @@
 							%a(href="#forms") Forms
 						%li<
 							%a(href="#miscellaneous") Miscellaneous
-						%li.dropdown
-							%a.dropdown-toggle(data-toggle="dropdown" href="#")<
-								=precede 'Layouts ' do
-									%b.caret>
-							%ul.dropdown-menu
-								- page.links.each do |link|
-									%li<
-										%a(href="/#{page.style}/#{link}.html") #{link}
+						%li<
+							%a(href="/#{page.style}/") Example Site
 
 			/ =========================Typography=========================
 			%section#typography
@@ -689,19 +681,7 @@
 
 		/ Placed at the end of the document so the pages load faster
 		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-transition.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-alert.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-modal.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-dropdown.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-scrollspy.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-tab.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-tooltip.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-popover.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-button.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-collapse.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-carousel.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-typeahead.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootstrap-affix.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/application.js")
-		%script(src="#{site.base_url}/#{site.jsDir}/bootswatch.js")
+		%script(src="#{site.js_url}/bootstrap-community.js")
+		%script(src="#{site.js_url}/application.js")
+		%script(src="#{site.js_url}/bootswatch.js")
 		
