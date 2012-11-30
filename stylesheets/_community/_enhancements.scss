@@ -38,11 +38,19 @@ body {
 	.container {
 		padding-top: 65px;
 	}
+	
+	.navbar-search > input {
+		width: 210px;
+	}
 }
 
 @media (min-width: 768px), (max-width: 979px) {
 	.navbar-fixed-top {
 		margin-bottom: 0px;
+	}
+	
+	.navbar-search > input {
+		width: 145px;
 	}
 }
 
