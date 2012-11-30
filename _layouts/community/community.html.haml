@@ -24,37 +24,20 @@
 		%link(rel="apple-touch-icon-precomposed" href="#{site.img_url}/apple-touch-icon-57-precomposed.png")
 
 	%body(data-spy="scroll" data-target=".subnav" data-offset="50")
-		.navbar.navbar-fixed-top
-			.navbar-inner
-				.container
+		.container
+			.navbar.navbar-fixed-top
+				.navbar-inner
 					%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
 						%span.icon-bar
 						%span.icon-bar
 						%span.icon-bar
-					%a.dropdown-toggle.brand(href="#{site.links.home}" data-toggle="dropdown")<
+					%a.brand(href="#{site.links.home}")<
 						%img(src="#{site.img_url}/common/jbosscommunitylogo_hori.png" alt="The JBoss Community")
-					%ul.dropdown-menu
-						%li<
-							%a(href="#{site.links.blogs}") Blogs
-						%li<
-							%a(href="#{site.links.tweets}") Tweets                
-						%li<
-							%a(href="#{site.links.facebook}") Facebook                
-						%li<
-							%a(href="#{site.links.twitter}") Twitter                
-						%li<
-							%a(href="#{site.links.linkedIn}") LinkedIn                
-						%li<
-							%a(href="#{site.links.vimeo}") Vimeo                
-						%li<
-							%a(href="#{site.links.asylum}") Asylum                
-						%li<
-							%a(href="#{site.links.events}") Events                
 					.nav-collapse
 						%ul.nav              
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.getStarted}")<
-									=precede 'GET STARTED ' do
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'Developers ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
@@ -72,8 +55,8 @@
 									%li<
 										%a(href="#{site.links.books}") Books                
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.getInvolved}")<
-									=precede 'GET INVOLVED ' do
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'Contributors ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
@@ -91,8 +74,8 @@
 									%li<
 										%a(href="#{site.links.reportSecurityIssue}") Report a Security Issue                
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.projects}")<
-									=precede 'PROJECTS ' do
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'Projects ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
@@ -117,8 +100,8 @@
 									%li<
 										%a(href="#{site.links.projects}") More...               
 							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#{site.links.products}")<
-									=precede 'PRODUCTS ' do
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'Products ' do
 										%b.caret>
 								%ul.dropdown-menu
 									%li<
@@ -142,25 +125,25 @@
 									%li.divider
 									%li<
 										%a(href="#{site.links.products}") More...
-					%ul.nav.pull-right
-						%li
-							.btn-group
-								%a.btn.dropdown-toggle(data-toggle="dropdown" href="#")
-									=succeed ' Username' do
-										%i.icon-user
-									%span.caret
-								%ul.dropdown-menu
-									%li<
-										%a(href="#") Profile
-									%li.divider
-									%li<
-										%a(href="#") Sign Out
-						%li.divider-vertical
-						%li
-							%form.navbar-search
-								%input.search-query(type="text" placeholder="Search")
+							%li
+								%ul.nav.pull-right
+									%li
+										.btn-group
+											%a.btn.dropdown-toggle(data-toggle="dropdown" href="#")
+												=succeed ' Log In | Register' do
+													%i.icon-user
+												%span.caret
+											%ul.dropdown-menu
+												%li<
+													%a(href="#") Profile
+												%li.divider
+												%li<
+													%a(href="#") Sign Out
+									%li.divider-vertical
+									%li
+										%form.navbar-search.pull-right
+											%input.search-query(type="text" placeholder="Search")
 
-		.container
 			~ content
 
 		.company
@@ -169,8 +152,8 @@
 				
 		/ ==========================JavaScript========================
 		/ Placed at the end of the document so the pages load faster
-		%script(src="#{site.js_url}/bootstrap-community.js")
 		%script(src="#{site.js_url}/jquery.js")
+		%script(src="#{site.js_url}/bootstrap-community.js")
 		%script(src="#{site.js_url}/prettify.js")
 		%script(src="#{site.js_url}/application.js")
 		%script(src="#{site.js_url}/subnavstick.js")

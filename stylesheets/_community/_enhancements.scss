@@ -14,13 +14,45 @@ body {
 
 /* Branding and Prime navbar
 -------------------------------------------------- */
-.navbar .brand {
-	background-image: url("../../images/common/jbosscommunitylogo_hori.png");
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	width: 165px;
-	padding: 10px;
+.navbar {
+	margin-left: auto;
+	margin-right: auto;
+
+	.brand {
+		padding: 0;
+		margin-left: 10px;
+	}
 }
+
+.navbar-search > input {
+	width: 100px;
+}
+
+.navbar-fixed-top {
+	left: none;
+	right: none;
+	width: inherit;
+}
+	
+/* Top padding for content in all widths 
+--------------------------------------------- */
+@media (min-width: 980px) {
+	.container {
+		padding-top: 60px;
+	}
+}
+
+/*@media (min-width: 768px), (max-width: 979px) {
+	.navbar-fixed-top {
+		margin-bottom: 0px;
+	}
+}*/
+
+/*@media (max-width: 979px) {
+	.navbar-fixed-top .brand {
+		margin: 0 0 0 10px;
+	}
+}*/
 
  /* Project navbar created by using the "inverse" styles
 -------------------------------------------------- */
@@ -232,24 +264,4 @@ body {
 			 -moz-border-radius: 0;
 						border-radius: 0;
   }
-}
-
-/* Top padding for content in all widths 
---------------------------------------------- */
-@media (min-width: 980px) {
-	.container {
-		padding-top: 40px;
-	}
-}
-
-@media (min-width: 768px), (max-width: 979px) {
-	.navbar-fixed-top {
-		margin-bottom: 0px;
-	}
-}
-
-@media (max-width: 979px) {
-	.navbar-fixed-top .brand {
-		margin: 0 0 0 10px;
-	}
 }
