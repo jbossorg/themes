@@ -13,7 +13,6 @@
 
 		/ Styles
 		%link(href="#{site.css_url}/bootstrap-#{page.style}.css" rel="stylesheet")
-		%link(href="#{site.css_url}/docs.css" rel="stylesheet")
 
 	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
 
@@ -187,7 +186,6 @@
 								%span.icon-bar
 								%span.icon-bar
 								%span.icon-bar
-							%a.brand(href="#") Project name
 							.nav-collapse
 								%ul.nav
 									%li.active<
@@ -673,9 +671,9 @@
 			%br
 
 			/ =========================Footer=========================
-			%footer.footer
-				%p.pull-right<
-					%a(href="#") Back to top
+		.company
+			%a(href="http://www.redhat.com/products/jbossenterprisemiddleware/")<
+				%img(src="#{site.img_url}/common/redhat_logo.png")
 
 		/ =========================JavaScript=========================
 
