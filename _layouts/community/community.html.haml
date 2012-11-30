@@ -24,14 +24,14 @@
 		%link(rel="apple-touch-icon-precomposed" href="#{site.img_url}/apple-touch-icon-57-precomposed.png")
 
 	%body(data-spy="scroll" data-target=".subnav" data-offset="50")
-		.container
-			.navbar.navbar-fixed-top
-				.navbar-inner
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
 					%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
 						%span.icon-bar
 						%span.icon-bar
 						%span.icon-bar
-					%a.brand(href="#{site.links.home}")<
+					%a.brand(href="#{site.links.home}") JBoss Community<
 					.nav-collapse
 						%ul.nav              
 							%li.dropdown
@@ -147,6 +147,7 @@
 										%form.navbar-search.pull-right
 											%input.search-query(type="text" placeholder="Search")
 
+		.container
 			~ content
 
 		.company
