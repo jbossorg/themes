@@ -124,26 +124,27 @@
 									%li.divider
 									%li<
 										%a(href="#{site.links.products}") More...
-								%li
-									.btn-group
-										%a.btn.btn-info.btn-small.dropdown-toggle(data-toggle="dropdown" href="#")
-											=succeed ' Log In | Register' do
-												%i.icon-user
-											%span.caret
-										%ul.dropdown-menu
-											%li<
-												%a(href="#") Log In
-											%li<
-												%a(href="#") Register
-											%li.divider
-											%li<
-												%a(href="#") Forgot Username
-											%li<
-												%a(href="#") Forgot Password
-								%li.divider-vertical
-								%li
-									%form.navbar-search
-										%input.search-query(type="text" placeholder="Search")
+						%ul.nav.pull-right
+							%li
+								.btn-group
+									%a.btn.btn-info.btn-small.dropdown-toggle(data-toggle="dropdown" href="#")
+										=succeed ' Log In | Register' do
+											%i.icon-user
+										%span.caret
+									%ul.dropdown-menu
+										%li<
+											%a(href="#") Log In
+										%li<
+											%a(href="#") Register
+										%li.divider
+										%li<
+											%a(href="#") Forgot Username
+										%li<
+											%a(href="#") Forgot Password
+							%li.divider-vertical
+							%li
+								%form.navbar-search
+									%input.search-query(type="text" placeholder="Search")
 
 		.container
 			~ content
