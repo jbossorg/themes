@@ -1,5 +1,9 @@
 /* This file contains changes to bootstrap selectors, classes and identifiers that aren't directly configurable using variables. */
 
+html {
+	background: $bodyBackground;
+}
+
 body {
 	background: $bodyBackground; /* Old browsers */
 	background: -moz-linear-gradient(top, #bdc4cf 0%, $bodyBackground 40%); /* FF 3.6+ */
@@ -10,6 +14,7 @@ body {
 	background: linear-gradient(to bottom,  #bdc4cf 0%, $bodyBackground 40%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdc4cf', endColorstr='$bodyBackground', GradientType=0 ); /* IE 6-9 */
   background-position: 0 0;
+	background-repeat: no-repeat;
 }
 
 /* Branding and Prime navbar
