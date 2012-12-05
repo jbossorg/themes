@@ -7,152 +7,172 @@
 		%meta(name="description" content="")
 		%meta(name="author" content="")
 
-		/ Styles
-		%link(href="#{site.css_url}/fonts.css" rel="stylesheet")
-		%link(href="#{site.css_url}/prettify.css" rel="stylesheet")
-		%link(href="#{site.css_url}/bootstrap-#{page.style}.css" rel="stylesheet")
+		%link(href="#{site.css_url}/bootstrap-#{page.style}.css" rel="stylesheet" media="screen")
 
 		/ HTML5 shim, for IE6-8 support of HTML5 elements
 		/[if lt IE 9]
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
 		/ Fav and touch icons
-		%link(rel="shortcut icon" href="#{site.img_url}/favicon.ico")
+		%link(rel="shortcut icon" href="#{site.img_url}/common/favicon.ico")
 		%link(rel="apple-touch-icon-precomposed" sizes="144x144" href="#{site.img_url}/apple-touch-icon-144-precomposed.png")
 		%link(rel="apple-touch-icon-precomposed" sizes="114x114" href="#{site.img_url}/apple-touch-icon-114-precomposed.png")
 		%link(rel="apple-touch-icon-precomposed" sizes="72x72" href="#{site.img_url}/apple-touch-icon-72-precomposed.png")
 		%link(rel="apple-touch-icon-precomposed" href="#{site.img_url}/apple-touch-icon-57-precomposed.png")
 
 	%body(data-spy="scroll" data-target=".subnav" data-offset="50")
-		.navbar.navbar-fixed-top
-			.navbar-inner
-				.container
-					%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
-						%span.icon-bar
-						%span.icon-bar
-						%span.icon-bar
-					%a.brand(href="#{site.links.home}") JBoss Community<
-					.nav-collapse
-						%ul.nav              
-							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
-									=precede 'Developers ' do
-										%b.caret>
-								%ul.dropdown-menu
-									%li<
-										%a(href="#{site.links.getStarted}") Get Started
-									%li<
-										%a(href="#{site.links.getToolKit}") Get Tool Kit (JBDS)
-									%li<
-										%a(href="#{site.links.downloads}") Downloads                
-									%li<
-										%a(href="#{site.links.documentation}") Documentation                
-									%li<
-										%a(href="#{site.links.forums}") Forums                
-									%li<
-										%a(href="#{site.links.webinars}") Webinars                
-									%li<
-										%a(href="#{site.links.events}") Events                
-									%li<
-										%a(href="#{site.links.articles}") Articles                
-									%li<
-										%a(href="#{site.links.books}") Books                
-							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
-									=precede 'Contributors ' do
-										%b.caret>
-								%ul.dropdown-menu
-									%li<
-										%a(href="#{site.links.getInvolved}") Get Involved
-									%li<
-										%a(href="#{site.links.wiki}") Wiki
-									%li<
-										%a(href="#{site.links.discussions}") Discussions                
-									%li<
-										%a(href="#{site.links.issueTracker}") Issue Tracker                
-									%li<
-										%a(href="#{site.links.sourceRepos}") Source Repositories                
-									%li<
-										%a(href="#{site.links.userGroups}") User Groups                
-									%li<
-										%a(href="#{site.links.sigs}") Special Interest Groups                
-									%li<
-										%a(href="#{site.links.reportSecurityIssue}") Report a Security Issue                
-							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
-									=precede 'Projects ' do
-										%b.caret>
-								%ul.dropdown-menu
-									%li<
-										%a(href="#{site.links.appServer}") Application Server
-									%li<
-										%a(href="#{site.links.webServer}") Web Server                
-									%li<
-										%a(href="#{site.links.gateIn}") GateIn                
-									%li<
-										%a(href="#{site.links.esb}") ESB                
-									%li<
-										%a(href="#{site.links.drools}") Drools                
-									%li<
-										%a(href="#{site.links.hibernate}") Hibernate                
-									%li<
-										%a(href="#{site.links.richfaces}") RichFaces               
-									%li<
-										%a(href="#{site.links.tools}") Tools               
-									%li<
-										%a(href="#{site.links.rhq}") RHQ
-									%li.divider
-									%li<
-										%a(href="#{site.links.projects}") More...               
-							%li.dropdown
-								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
-									=precede 'Products ' do
-										%b.caret>
-								%ul.dropdown-menu
-									%li<
-										%a(href="#{site.links.appPlatform}") Application Platform
-									%li<
-										%a(href="#{site.links.webPlatform}") Web Platform                
-									%li<
-										%a(href="#{site.links.portalPlatform}") Portal Platform                
-									%li<
-										%a(href="#{site.links.soaPlatform}") SOA Platform                
-									%li<
-										%a(href="#{site.links.brms}") Business Rules Mgmt System                
-									%li<
-										%a(href="#{site.links.dataServicesPlatform}") Data Services Platform                
-									%li<
-										%a(href="#{site.links.wfk}") Web Framework Kit               
-									%li<
-										%a(href="#{site.links.devStudio}") Developer Studio               
-									%li<
-										%a(href="#{site.links.operationsNetwork}") Operations Network
-									%li.divider
-									%li<
-										%a(href="#{site.links.products}") More...
-						%ul.nav.pull-right
-							%li
-								.btn-group
-									%a.btn.btn-info.btn-small.dropdown-toggle(data-toggle="dropdown" href="#")
-										=succeed ' Log In | Register' do
-											%i.icon-user
-										%span.caret
+		.container
+			.globalbanner
+				.socialmedia
+					%ul
+						%li<
+							%a(href="#{site.links.asylum}")<
+								%img(src="#{site.img_url}/common/socialmedia_icon16_asylum.png")
+						%li<
+							%a(href="#{site.links.vimeo}")<
+								%img(src="#{site.img_url}/common/socialmedia_icon16_vimeo.png")
+						%li<
+							%a(href="#{site.links.linkedIn}")<
+								%img(src="#{site.img_url}/common/socialmedia_icon16_linkedin.png")
+						%li<
+							%a(href="#{site.links.twitter}")<
+								%img(src="#{site.img_url}/common/socialmedia_icon16_twitter.png")
+						%li<
+							%a(href="#{site.links.facebook}")<
+								%img(src="#{site.img_url}/common/socialmedia_icon16_facebook.png")
+						%li<
+							%a(href="#{site.links.contact}")<
+								%img(src="#{site.img_url}/common/socialmedia_icon16_email.png")
+				.globalbrand
+					%a(href="http://www.jboss.org")<
+						%img(src="#{site.img_url}/common/jbosscommunitylogo_large.png")
+			.navbar
+				.navbar-inner
+					.container
+						%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse" style="margin-top: 2px;") menu
+
+						.nav-collapse
+							%ul.nav
+								%li.active<
+									%a(href="#{site.links.home}") Home
+								%li.dropdown
+									%a.dropdown-toggle(data-toggle="dropdown" href="#Developers")<
+										=precede 'Developers ' do
+											%b.caret>
 									%ul.dropdown-menu
 										%li<
-											%a(href="#") Log In
+											%a(href="#{site.links.getStarted}") Get Started
 										%li<
-											%a(href="#") Register
+											%a(href="#{site.links.getToolKit}") Get Tool Kit (JBDS)
+										%li<
+											%a(href="#{site.links.downloads}") Downloads                
+										%li<
+											%a(href="#{site.links.documentation}") Documentation                
+										%li<
+											%a(href="#{site.links.forums}") Forums                
+										%li<
+											%a(href="#{site.links.webinars}") Webinars                
+										%li<
+											%a(href="#{site.links.events}") Events                
+										%li<
+											%a(href="#{site.links.articles}") Articles                
+										%li<
+											%a(href="#{site.links.books}") Books                
+								%li.dropdown
+									%a.dropdown-toggle(data-toggle="dropdown" href="#Contributors")<
+										=precede 'Contributors ' do
+											%b.caret>
+									%ul.dropdown-menu
+										%li<
+											%a(href="#{site.links.getInvolved}") Get Involved
+										%li<
+											%a(href="#{site.links.wiki}") Wiki
+										%li<
+											%a(href="#{site.links.discussions}") Discussions                
+										%li<
+											%a(href="#{site.links.issueTracker}") Issue Tracker                
+										%li<
+											%a(href="#{site.links.sourceRepos}") Source Repositories                
+										%li<
+											%a(href="#{site.links.userGroups}") User Groups                
+										%li<
+											%a(href="#{site.links.sigs}") Special Interest Groups                
+										%li<
+											%a(href="#{site.links.reportSecurityIssue}") Report a Security Issue                
+								%li.dropdown
+									%a.dropdown-toggle(data-toggle="dropdown" href="#Projects")<
+										=precede 'Projects ' do
+											%b.caret>
+									%ul.dropdown-menu
+										%li<
+											%a(href="#{site.links.appServer}") Application Server
+										%li<
+											%a(href="#{site.links.webServer}") Web Server                
+										%li<
+											%a(href="#{site.links.gateIn}") GateIn                
+										%li<
+											%a(href="#{site.links.esb}") ESB                
+										%li<
+											%a(href="#{site.links.drools}") Drools                
+										%li<
+											%a(href="#{site.links.hibernate}") Hibernate                
+										%li<
+											%a(href="#{site.links.richfaces}") RichFaces               
+										%li<
+											%a(href="#{site.links.tools}") Tools               
+										%li<
+											%a(href="#{site.links.rhq}") RHQ
 										%li.divider
 										%li<
-											%a(href="#") Forgot Username
+											%a(href="#{site.links.projects}") More...               
+								%li.dropdown
+									%a.dropdown-toggle(data-toggle="dropdown" href="#Products")<
+										=precede 'Products ' do
+											%b.caret>
+									%ul.dropdown-menu
 										%li<
-											%a(href="#") Forgot Password
-							%li.divider-vertical
-							%li
-								%form.navbar-search
-									%input.search-query(type="text" placeholder="Search")
+										%a(href="#{site.links.appPlatform}") Application Platform
+										%li<
+											%a(href="#{site.links.webPlatform}") Web Platform                
+										%li<
+											%a(href="#{site.links.portalPlatform}") Portal Platform                
+										%li<
+											%a(href="#{site.links.soaPlatform}") SOA Platform                
+										%li<
+											%a(href="#{site.links.brms}") Business Rules Mgmt System                
+										%li<
+											%a(href="#{site.links.dataServicesPlatform}") Data Services Platform                
+										%li<
+											%a(href="#{site.links.wfk}") Web Framework Kit               
+										%li<
+											%a(href="#{site.links.devStudio}") Developer Studio               
+										%li<
+											%a(href="#{site.links.operationsNetwork}") Operations Network
+										%li.divider
+										%li<
+											%a(href="#{site.links.products}") More...
+							%ul.nav.pull-right
+								%li
+									%form.navbar-search
+										%input.search-query(type="text" placeholder="Search")
+								%li.divider-vertical
+								%li
+									.btn-group
+										%a.btn.btn-info.btn-small.dropdown-toggle(data-toggle="dropdown" href="#LogInRegister")
+											=succeed ' Log In | Register' do
+												%i.icon-user
+											%span.caret
+										%ul.dropdown-menu
+											%li<
+												%a(href="#") Log In
+											%li<
+												%a(href="#") Register
+											%li.divider
+											%li<
+												%a(href="#") Forgot Username
+											%li<
+												%a(href="#") Forgot Password
 
-		.container
 			~ content
 
 		.company
@@ -163,6 +183,3 @@
 		/ Placed at the end of the document so the pages load faster
 		%script(src="#{site.js_url}/jquery.js")
 		%script(src="#{site.js_url}/bootstrap-community.js")
-		%script(src="#{site.js_url}/prettify.js")
-		%script(src="#{site.js_url}/application.js")
-		%script(src="#{site.js_url}/subnavstick.js")

@@ -19,48 +19,13 @@ body {
 
 /* Branding and Prime navbar
 -------------------------------------------------- */
-.navbar .brand {
-	background-image: url("../../images/common/jbosscommunitylogo_hori.png");
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	width: 165px;
-	padding: 10px;
-}
-
 .navbar-search .search-query {
 	background-color: $navbarLinkBackgroundActive;
 	border-color: $navbarLinkBackgroundActive;
 }
 
-/* Top padding for content in all widths 
---------------------------------------------- */
-@media (min-width: 980px) {
-	.container {
-		padding-top: 65px;
-	}
-	
-	.navbar-search > input {
-		width: 210px;
-	}
-}
-
-@media (min-width: 768px), (max-width: 979px) {
-	.navbar-fixed-top {
-		margin-bottom: 0px;
-	}
-	
-	.navbar-search > input {
-		width: 135px;
-	}
-}
-
-@media (max-width: 979px) {
-	.navbar-fixed-top .brand {
-		margin: 0 0 0 10px;
-	}
-	.container {
-		padding-top: 25px;
-	}
+.navbar-search > input {
+		width: 190px;
 }
 
  /* Project navbar created by using the "inverse" styles
@@ -113,15 +78,14 @@ body {
 	background-color: $white;
 	padding-left: 30px;
 	padding-right: 30px;
+	padding-top: 25px;
 }
 
 .navbar-inner .container {
 	background-color: transparent;
 	padding-top: 0px;
-}
-
-.navbar-inverse .navbar-inner .container {
 	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .well, .breadcrumb, .pagination a:hover, .pagination .active a, .pagination .active span {

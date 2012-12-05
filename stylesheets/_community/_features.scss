@@ -1,21 +1,54 @@
 /* These are new selectors and styles created for unique uses on the site not covered by Bootstrap defaults. */
 
+/* ------------------ JBoss Community header (not for project pages) ------------------------- */
+.globalbanner {
+	.globalbrand {
+		margin: 10px 0px;
+	}
+
+	.socialmedia {
+		float:right;
+
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			display:inline;
+		}
+		
+		a {
+			padding-left: 15px;
+		}
+
+		img {
+			opacity:0.6;
+			filter:alpha(opacity=40);
+		}
+
+		img:hover {
+			opacity:1.0;
+			filter:alpha(opacity=100);
+		}
+	}
+}
+
 /* ------------------ Project banner, tagline and tab ------------------------- */
 @media (min-width: 980px) {
 	.banner {
-		margin-top:	-65px;
+		margin-top:	-25px;
 	}
 }
 
 @media (min-width: 768px), (max-width: 979px) {
 	.banner {
-		margin-top: -65px;
+		margin-top: -25px;
 	}
 }
 
 @media (max-width: 979px) {
 	.banner {
-		margin-top: -30px;
+		margin-top: -25px;
 	}
 }
 
@@ -55,4 +88,71 @@
 .company {
 	width: 76px;
 	margin: 10px auto;
+}
+
+/* ------------------ Fonts ------------------------- */
+@font-face {
+	font-family: 'TitilliumText22LThin';
+	src: font-url('titilliumtext/TitilliumText22L001-webfont.eot');
+	src: font-url('titilliumtext/TitilliumText22L001-webfont.eot?#iefix') format('embedded-opentype'),
+		font-url('titilliumtext/TitilliumText22L001-webfont.woff') format('woff'),
+		font-url('titilliumtext/TitilliumText22L001-webfont.ttf') format('truetype'),
+		font-url('titilliumtext/TitilliumText22L001-webfont.svg#TitilliumText22LThin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TitilliumText22LLight';
+	src: font-url('titilliumtext/TitilliumText22L002-webfont.eot');
+	src: font-url('titilliumtext/TitilliumText22L002-webfont.eot?#iefix') format('embedded-opentype'),
+		font-url('titilliumtext/TitilliumText22L002-webfont.woff') format('woff'),
+		font-url('titilliumtext/TitilliumText22L002-webfont.ttf') format('truetype'),
+		font-url('titilliumtext/TitilliumText22L002-webfont.svg#TitilliumText22LLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TitilliumText22LRegular';
+	src: font-url('titilliumtext/TitilliumText22L003-webfont.eot');
+	src: font-url('titilliumtext/TitilliumText22L003-webfont.eot?#iefix') format('embedded-opentype'),
+		font-url('titilliumtext/TitilliumText22L003-webfont.woff') format('woff'),
+		font-url('titilliumtext/TitilliumText22L003-webfont.ttf') format('truetype'),
+		font-url('titilliumtext/TitilliumText22L003-webfont.svg#TitilliumText22LRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TitilliumText22LMedium';
+	src: font-url('titilliumtext/TitilliumText22L004-webfont.eot');
+	src: font-url('titilliumtext/TitilliumText22L004-webfont.eot?#iefix') format('embedded-opentype'),
+		font-url('titilliumtext/TitilliumText22L004-webfont.woff') format('woff'),
+		font-url('titilliumtext/TitilliumText22L004-webfont.ttf') format('truetype'),
+		font-url('titilliumtext/TitilliumText22L004-webfont.svg#TitilliumText22LMedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TitilliumText22LBold';
+	src: font-url('titilliumtext/TitilliumText22L005-webfont.eot');
+	src: font-url('titilliumtext/TitilliumText22L005-webfont.eot?#iefix') format('embedded-opentype'),
+		font-url('titilliumtext/TitilliumText22L005-webfont.woff') format('woff'),
+		font-url('titilliumtext/TitilliumText22L005-webfont.ttf') format('truetype'),
+		font-url('titilliumtext/TitilliumText22L005-webfont.svg#TitilliumText22LBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TitilliumText22LXBold';
+	src: font-url('titilliumtext/TitilliumText22L006-webfont.eot');
+	src: font-url('titilliumtext/TitilliumText22L006-webfont.eot?#iefix') format('embedded-opentype'),
+		font-url('titilliumtext/TitilliumText22L006-webfont.woff') format('woff'),
+		font-url('titilliumtext/TitilliumText22L006-webfont.ttf') format('truetype'),
+		font-url('titilliumtext/TitilliumText22L006-webfont.svg#TitilliumText22LXBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }

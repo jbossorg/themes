@@ -7,9 +7,6 @@
 		%meta(name="description" content="")
 		%meta(name="author" content="")
 
-		/ Styles
-		%link(href="#{site.css_url}/fonts.css" rel="stylesheet")
-		%link(href="#{site.css_url}/prettify.css" rel="stylesheet")
 		%link(href="#{site.css_url}/bootstrap-#{page.style}.css" rel="stylesheet")
 
 		/ HTML5 shim, for IE6-8 support of HTML5 elements
@@ -17,15 +14,13 @@
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
 		/ Fav and touch icons
-		%link(rel="shortcut icon" href="#{site.img_url}/favicon.ico")
+		%link(rel="shortcut icon" href="#{site.img_url}/tools/jbosstools_icon_16x.png")
 		%link(rel="apple-touch-icon-precomposed" sizes="144x144" href="#{site.img_url}/apple-touch-icon-144-precomposed.png")
 		%link(rel="apple-touch-icon-precomposed" sizes="114x114" href="#{site.img_url}/apple-touch-icon-114-precomposed.png")
 		%link(rel="apple-touch-icon-precomposed" sizes="72x72" href="#{site.img_url}/apple-touch-icon-72-precomposed.png")
 		%link(rel="apple-touch-icon-precomposed" href="#{site.img_url}/apple-touch-icon-57-precomposed.png")
 
 	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
-
-		/ =========================Project Banner=========================
 		.container
 			.banner
 				%a(href="http://www.jboss.org/tools")<
@@ -37,17 +32,12 @@
 						
 			~ content
 
-		/ =========================Company Logo=========================
 		.company
 			%a(href="http://www.redhat.com/products/jbossenterprisemiddleware/")<
 				%img(src="#{site.img_url}/common/redhat_logo.png")
 			
 		/ =========================JavaScript=========================
 		/ Placed at the end of the document so the pages load faster
-		%script(type="text/javascript" src="http://platform.twitter.com/widgets.js")
 		%script(src="#{site.js_url}/jquery.js")
-		%script(src="#{site.js_url}/prettify.js") 
 		%script(src="#{site.js_url}/bootstrap-community.js")
-		%script(src="#{site.js_url}/application.js") 
-		%script(src="#{site.js_url}/subnavstick.js")
 		
