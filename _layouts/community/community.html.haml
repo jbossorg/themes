@@ -20,7 +20,7 @@
 		%link(rel="apple-touch-icon-precomposed" sizes="72x72" href="#{site.img_url}/apple-touch-icon-72-precomposed.png")
 		%link(rel="apple-touch-icon-precomposed" href="#{site.img_url}/apple-touch-icon-57-precomposed.png")
 
-	%body(data-spy="scroll" data-target=".subnav" data-offset="50")
+	%body
 		.container
 			.globalbanner
 				.socialmedia
@@ -46,7 +46,7 @@
 				.globalbrand
 					%a(href="http://www.jboss.org")<
 						%img(src="#{site.img_url}/common/jbosscommunitylogo_large.png")
-			.navbar
+			.navbar#navbar-fix
 				.navbar-inner
 					.container
 						%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse" style="margin-top: 2px;") menu
@@ -183,3 +183,4 @@
 		/ Placed at the end of the document so the pages load faster
 		%script(src="#{site.js_url}/jquery.js")
 		%script(src="#{site.js_url}/bootstrap-community.js")
+		%script(src="#{site.js_url}/jbossorg-navbarfix.js")

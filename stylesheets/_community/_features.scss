@@ -38,20 +38,46 @@
 
 @media (min-width: 1200px) {
 	#communitysearch { max-width: 420px; }
-	#projectsearch { max-width: 377px; }	
+	#projectsearch { max-width: 377px; }
+	
+	#navbar-fixed {
+		position: fixed;
+		top: 0px;
+		width: inherit;
+	}
 }
 
 @media (min-width: 980px) and (max-width: 1199px) {
 	#communitysearch { max-width: 190px; }
 	#projectsearch { max-width: 147px; }
+	
+	#navbar-fixed {
+		position: fixed;
+		top: 0px;
+		width: inherit;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
 	#communitysearch, #projectsearch { max-width: 620px; }
+	
+	#navbar-fixed {
+		position: fixed;
+		top: 0px;
+		width: inherit;
+	}
 }
 
 @media (max-width: 767px) {	
 	#communitysearch, #projectsearch { @include input-block-level(); }
+	
+	#navbar-fixed {
+		position: fixed;
+		top: 0px;
+		width: auto;
+		left: 50px;
+		right: 50px
+	}
 }
 
 /* ------------------ Project banner, tagline and tab ------------------------- */
