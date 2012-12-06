@@ -61,23 +61,13 @@
 @media (min-width: 768px) and (max-width: 979px) {
 	#communitysearch, #projectsearch { max-width: 620px; }
 	
-	#navbar-fixed {
-		position: fixed;
-		top: 0px;
-		width: inherit;
-	}
+	#navbar-fixed { display: none; }
 }
 
 @media (max-width: 767px) {	
 	#communitysearch, #projectsearch { @include input-block-level(); }
 	
-	#navbar-fixed {
-		position: fixed;
-		top: 0px;
-		width: auto;
-		left: 50px;
-		right: 50px
-	}
+	#navbar-fixed { display: none; }
 }
 
 /* ------------------ Project banner, tagline and tab ------------------------- */
