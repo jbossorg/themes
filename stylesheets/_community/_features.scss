@@ -33,31 +33,34 @@
 	}
 }
 
+/* ------------------ Resizable Navigation Search Bars ------------------------- */
+#communitysearch, #projectsearch { width: 620px; }
+
+@media (min-width: 1200px) {
+	#communitysearch { max-width: 420px; }
+	#projectsearch { max-width: 377px; }	
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+	#communitysearch { max-width: 190px; }
+	#projectsearch { max-width: 147px; }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	#communitysearch, #projectsearch { max-width: 620px; }
+}
+
+@media (max-width: 767px) {	
+	#communitysearch, #projectsearch { @include input-block-level(); }
+}
+
 /* ------------------ Project banner, tagline and tab ------------------------- */
-@media (min-width: 980px) {
-	.banner {
-		margin-top:	-25px;
-	}
-}
-
-@media (min-width: 768px), (max-width: 979px) {
-	.banner {
-		margin-top: -25px;
-	}
-}
-
-@media (max-width: 979px) {
-	.banner {
-		margin-top: -25px;
-	}
-}
-
 .banner {
 	position: relative;
-}
-
-.banner > a > img {
-	min-height: 35px;
+	
+	a {
+		img { min-height: 30px; }
+	}
 }
 
 .taglinelight, .taglinedark {
