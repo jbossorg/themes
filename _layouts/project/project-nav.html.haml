@@ -5,7 +5,7 @@ title: Project Navigation
 / =========================Masthead=========================
 .navbar.navbar-inverse#navbar-fix
 	.navbar-inner
-		.container(style="width: auto;")
+		.container
 			%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
 				%span.icon-bar
 				%span.icon-bar
@@ -43,16 +43,22 @@ title: Project Navigation
 						%a.dropdown-toggle(href="#" data-toggle="dropdown")<
 							=precede 'Follow Us ' do
 								%b.caret>
-						%ul.dropdown-menu{ :style => "min-width: 40px;" }
+						%ul.dropdown-menu.projectsocialmedia
 							%li<
-								%a(href="#"){ :style => "padding: 3px 10px;" }<
-									%img(src="#{site.img_url}/common/socialicons_twitter.png")
+								%a(href="#")<
+									%img(src="#{site.img_url}/common/socialmedia_icon40_twitter.png")
 							%li<
-								%a(href="#"){ :style => "padding: 3px 10px;" }<
-									%img(src="#{site.img_url}/common/socialicons_googleplus.png")
+								%a(href="#")<
+									%img(src="#{site.img_url}/common/socialmedia_icon40_googleplus.png")
 							%li<
-								%a(href="#"){ :style => "padding: 3px 10px;" }<
-									%img(src="#{site.img_url}/common/socialicons_facebook.png")
+								%a(href="#")<
+									%img(src="#{site.img_url}/common/socialmedia_icon40_facebook.png")
+							%li<
+								%a(href="#")<
+									%img(src="#{site.img_url}/common/socialmedia_icon40_youtube.png")
+							%li<
+								%a(href="#")<
+									%img(src="#{site.img_url}/common/socialmedia_icon40_linkedin.png")
 					%li.divider
 
 				%ul.nav.pull-right

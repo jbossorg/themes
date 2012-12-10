@@ -28,7 +28,6 @@ function processScroll() {
 	if (!isFixed && $(window).scrollTop() >= $('.navbar#navbar-fix').offset().top) {
 		var element = navbar.cloneNode(true);
 		element.id = "navbar-fixed";
-		element.className = "navbar-fixed-top";
 		navbar.parentNode.appendChild(element);
 		isFixed = 1;
 	}

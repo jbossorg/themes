@@ -15,12 +15,12 @@
 
 		/ Fav and touch icons
 		%link(rel="shortcut icon" href="#{site.img_url}/tools/jbosstools_icon_16x.png")
-		%link(rel="apple-touch-icon-precomposed" sizes="144x144" href="#{site.img_url}/apple-touch-icon-144-precomposed.png")
-		%link(rel="apple-touch-icon-precomposed" sizes="114x114" href="#{site.img_url}/apple-touch-icon-114-precomposed.png")
-		%link(rel="apple-touch-icon-precomposed" sizes="72x72" href="#{site.img_url}/apple-touch-icon-72-precomposed.png")
-		%link(rel="apple-touch-icon-precomposed" href="#{site.img_url}/apple-touch-icon-57-precomposed.png")
+		%link(rel="apple-touch-icon-precomposed" sizes="144x144" href="#{site.img_url}/tools/tools-touch-icon-144-precomposed.png")
+		%link(rel="apple-touch-icon-precomposed" sizes="114x114" href="#{site.img_url}/tools/tools-touch-icon-114-precomposed.png")
+		%link(rel="apple-touch-icon-precomposed" sizes="72x72" href="#{site.img_url}/tools/tools-touch-icon-72-precomposed.png")
+		%link(rel="apple-touch-icon-precomposed" href="#{site.img_url}/tools/tools-touch-icon-57-precomposed.png")
 
-	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
+	%body.preview
 		.container
 			.banner
 				%a(href="http://www.jboss.org/tools")<
@@ -40,4 +40,3 @@
 		/ Placed at the end of the document so the pages load faster
 		%script(src="#{site.js_url}/jquery.js")
 		%script(src="#{site.js_url}/bootstrap-community.js")
-		%script(src="#{site.js_url}/jbossorg-navbarfix.js")

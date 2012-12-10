@@ -11,6 +11,7 @@
 
 		ul {
 			list-style-type: none;
+			margin: 0px;
 		}
 
 		li {
@@ -18,7 +19,7 @@
 		}
 		
 		a {
-			padding-left: 15px;
+			padding-left: 8px;
 		}
 
 		img {
@@ -30,6 +31,14 @@
 			opacity:1.0;
 			filter:alpha(opacity=100);
 		}
+	}
+}
+
+.projectsocialmedia {
+	min-width: 40px;
+	
+	li > a {
+		padding: 3px 10px;
 	}
 }
 
