@@ -21,12 +21,14 @@ fileMerger:
     - /javascripts/_bootstrap-collapse.js
     - /javascripts/_bootstrap-dropdown.js
     - /javascripts/_bootstrap-modal.js
-    - /javascripts/_bootstrap-popover.js
     - /javascripts/_bootstrap-scrollspy.js
     - /javascripts/_bootstrap-tab.js
     - /javascripts/_bootstrap-tooltip.js
+    - /javascripts/_bootstrap-popover.js
     - /javascripts/_bootstrap-transition.js
     - /javascripts/_bootstrap-typeahead.js
+    - /javascripts/_jbossorg-navbarfix.js
+
 
 profiles:
   development:
