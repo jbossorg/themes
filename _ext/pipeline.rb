@@ -1,3 +1,4 @@
+require 'wget_wrapper'
 require 'js_minifier'
 require 'css_minifier'
 require 'html_minifier'
@@ -6,6 +7,7 @@ require 'font_path'
 
 Awestruct::Extensions::Pipeline.new do
   helper Awestruct::Extensions::Partial
+  extension Awestruct::Extensions::WgetWrapper.new
   transformer Awestruct::Extensions::JsMinifier.new
   transformer Awestruct::Extensions::CssMinifier.new
   transformer Awestruct::Extensions::HtmlMinifier.new
