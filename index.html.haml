@@ -9,8 +9,8 @@
 		/[if lt IE 9]
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-		%link(href="#{site.css_url}/styles.css" rel="stylesheet")
-		%link(href="#{site.css_url}/bootswatch.css" rel="stylesheet")
+		%link(href="#{site.base_url}/stylesheets/styles.css" rel="stylesheet")
+		%link(href="#{site.base_url}/stylesheets/bootswatch.css" rel="stylesheet")
 		%link(href="http://feeds.feedburner.com/bootswatch" rel="alternate" type="application/rss+xml" title="Bootswatch")
 
 	%body
@@ -229,9 +229,9 @@
 					Based on [Bootstrap](http://twitter.github.com/bootstrap/). Hosted on [GitHub](http://pages.github.com/). Icons from [Glyphicons](http://glyphicons.com/). Web fonts from [Google](http://www.google.com/webfonts).
 
 		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-		%script(src="#{site.js_url}/bootstrap-community.js")
-		%script(src="#{site.js_url}/application.js")
-		%script(src="#{site.js_url}/bootswatch.js") 
+		%script(src="#{site.base_url}/javascripts/bootstrap-community.js")
+		%script(src="#{site.base_url}/javascripts/application.js")
+		%script(src="#{site.base_url}/javascripts/bootswatch.js") 
 		%script
 			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 		:javascript

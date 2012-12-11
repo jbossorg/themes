@@ -12,7 +12,7 @@
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
 		/ Styles
-		%link(href="#{site.css_url}/bootstrap-#{page.style}.css" rel="stylesheet")
+		%link(href="#{site.base_url}/stylesheets/bootstrap-#{page.style}.css" rel="stylesheet")
 
 	%body.preview(data-spy="scroll" data-target=".subnav" data-offset="80")
 
@@ -679,7 +679,7 @@
 
 		/ Placed at the end of the document so the pages load faster
 		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-		%script(src="#{site.js_url}/bootstrap-community.js")
-		%script(src="#{site.js_url}/application.js")
-		%script(src="#{site.js_url}/bootswatch.js")
+		%script(src="#{site.base_url}/javascripts/bootstrap-community.js")
+		%script(src="#{site.base_url}/javascripts/application.js")
+		%script(src="#{site.base_url}/javascripts/bootswatch.js")
 		
