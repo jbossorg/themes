@@ -49,9 +49,22 @@ module Awestruct
         end
 
         # Checking whether .gitignore files should be created (default)
-        createGitIgnoreFiles = true;
+        createGitIgnoreFiles = true
         if !site.wget['createGitIgnoreFiles'].nil? and !( site.wget['createGitIgnoreFiles'].to_s.eql?("true") )
-          createGitIgnoreFiles = false;
+          createGitIgnoreFiles = false
+        end
+
+        command = "wget "
+
+        # Getting 'options' from configuration
+        options = site.wget['options']
+        optionsStr = ''
+        if !options.nil?
+
+          options.each do |option|
+            command += " "+option.to_s
+          end
+
         end
 
         # Getting urls from site.yml
@@ -77,9 +90,11 @@ module Awestruct
 
         end
 
-        command = "wget --no-remove-listing -nv -r --no-host-directories --no-parent -N"+urlsStr
+        command += urlsStr
 
-        if system (command)
+        print "Downloading content...\n"
+
+        if system(command)
           print "Content downloaded.\n"
         else
           print "At least some of content from specified URLs was not reachable.\n"

@@ -32,6 +32,15 @@ fileMerger:
 wget:
   enabled: true
   createGitIgnoreFiles: true
+  options:
+    - --no-remove-listing
+    - -q
+    - -r
+    - --no-host-directories
+    - --no-parent
+    - -N
+    - --reject 'index.html*'
+    - -e robots=off
   urls:
     - http://static-stg.jboss.org/theme/css/bootstrap-community.css
     - http://static-stg.jboss.org/theme/js/jquery.js
@@ -43,6 +52,13 @@ wget:
 
 profiles:
   development:
+    css_minifier: disabled
+    js_minifier: disabled
+    html_minifier: disabled
+    theme_css_url: /theme/css
+    theme_js_url: /theme/js
+    theme_fonts_url: /theme/fonts
+    theme_images_url: /theme/images
   staging:
     css_minifier: disabled
     js_minifier: disabled
