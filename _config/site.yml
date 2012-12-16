@@ -1,8 +1,12 @@
 defaults:
   title: JBoss Community
 
-css_minifier: disabled
-js_minifier: disabled
+css_minifier:
+  enabled: false
+  fileSuffix: min
+js_minifier:
+  enabled: false
+  fileSuffix: min
 html_minifier: disabled
 
 theme_css_url: /stylesheets
