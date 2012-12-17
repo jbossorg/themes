@@ -100,30 +100,70 @@ module Awestruct
           print "At least some of content from specified URLs was not reachable.\n"
         end
 
-        # Create .gitignore files if directories were downloaded successfully.
-        if (createGitIgnoreFiles)
+        # Iterate over collected root directories of downloaded files.
+        directories.each do |directory|
 
-          directories.each do |directory|
+          dirPath = File.join(".",directory)
 
-            dirPath = File.join(".",directory)
-
-            # Checking if the directory itself exists, if not it means that probably wget failed to download it.
-            if (!File.exist?(dirPath) or !File.directory?dirPath)
-              next
-            end
-
-            gitIgnoreFilePath = File.join(dirPath,".gitignore")
-
-            # Checking if .gitignore file already exists
-            if (File.exist?(gitIgnoreFilePath))
-               next
-            end
-
-            gitIgnoreFile = File.new(gitIgnoreFilePath,"w")
-            gitIgnoreFile.write("*\n")
-            gitIgnoreFile.close
-
+          # Checking if the directory itself exists, if not it means that probably wget failed to download it.
+          if (!File.exist?(dirPath) or !File.directory?dirPath)
+            next
           end
+
+          createGitIgnoreFile(dirPath) if createGitIgnoreFiles
+
+          # Collect all pages' paths that are already scheduled for rendering.
+          pathnames = Array.new
+          site.pages.each { |page| pathnames.push( page.output_path ) }
+
+          addToRenderedPages( Pathname.new(dirPath) , site , pathnames )
+
+        end
+
+      end
+
+
+      # Create .gitignore file if it's not already there.
+      def createGitIgnoreFile ( directoryPath )
+
+        gitIgnoreFilePath = File.join(directoryPath,".gitignore")
+
+        # Checking if .gitignore file already exists
+        if (File.exist?(gitIgnoreFilePath))
+          return
+        end
+
+        gitIgnoreFile = File.new( gitIgnoreFilePath , "w" )
+        gitIgnoreFile.write("*\n")
+        gitIgnoreFile.close
+
+      end
+
+
+      # Add all files inside a directory to rendered pages list.
+      def addToRenderedPages ( directory , site , pathnames )
+
+        # Iteration through files and directories inside the directory.
+        directory.children.collect do |entry|
+
+          # If an entry is a non-hidden directory we process its content by a recursive call.
+          if entry.directory? and !entry.basename.to_s.start_with?('.')
+            addToRenderedPages( entry , site , pathnames )
+            next
+          end
+
+          # Removing '.' from the beginning of the path.
+          noDotPath = entry.to_s.slice(1..entry.to_s.length-1)
+
+          # Omiting files that are already scheduled for rendering or start with a '.'
+          next if pathnames.include?(noDotPath) or entry.basename.to_s.start_with?('.')
+
+          # Adding file to rendered pages.
+          pathnames.push(noDotPath)
+          page = site.engine.load_page(entry.to_s)
+          page.source_path = entry.to_s
+          page.output_path = entry.to_s
+          site.pages << page
 
         end
 
