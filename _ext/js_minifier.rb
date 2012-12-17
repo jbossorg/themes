@@ -55,7 +55,7 @@ module Awestruct
           ext_txt = ext[1..-1]
 
           # Filtering out non-css files and those which were already minimized with added suffix.
-          if ext_txt == "js" and ( fileSuffix.nil? or !File.fnmatch("*"+fileSuffix+".js",page.output_path) )
+          if ext_txt == "js" and ( fileSuffix.nil? or !page.output_path.to_s.end_with?(fileSuffix+".js") )
             print "Minifying javascript #{page.output_path} \n"
             output = Uglifier.new.compile(input)
             #print "+++++ CONTENT FOR "+File.basename(page.output_path).to_s+" +++++++"

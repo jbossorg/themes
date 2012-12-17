@@ -55,7 +55,7 @@ module Awestruct
           ext_txt = ext[1..-1]
 
           # Filtering out non-css files and those which were already minimized with added suffix.
-          if ext_txt == "css" and ( fileSuffix.nil? or !File.fnmatch("*"+fileSuffix+".css",page.output_path) )
+          if ext_txt == "css" and ( fileSuffix.nil? or !page.output_path.to_s.end_with?(fileSuffix+".css") )
             print "Minifying css #{page.output_path} \n"
             output = CSSminify.compress(input)
           else
