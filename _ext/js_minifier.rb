@@ -22,12 +22,9 @@ require 'uglifier'
 #
 # 2. In your site.yml add:
 #
-#    js_minifier:
-#      enabled: true
-#      fileSuffix: min
+#    js_minifier: enabled
 #
-#    This setting is optional. 'enabled' defaults to 'true' and 'fileSuffix' defaults to an empty string.
-#    Which implies minification of file content in place. If 'fileSuffix' is given then a new file is created.
+#    This setting is optional and defaults to enabled.
 #
 ##
 module Awestruct
@@ -38,13 +35,8 @@ module Awestruct
 
         # Checking if 'js_minifier' setting is provided and whether it's enabled.
         # By default, if it's not provided, we imply it's enabled.
-        if !site.js_minifier.nil? and !site.js_minifier['enabled'].nil? and site.js_minifier['enabled'].to_s.eql?("false")
+        if !site.js_minifier.nil? and !site.js_minifier.to_s.eql?('enabled')
           return input
-        end
-
-        fileSuffix = nil
-        if !site.js_minifier.nil? and !site.js_minifier['fileSuffix'].nil? and site.js_minifier['fileSuffix'].to_s.length>0
-          fileSuffix = site.js_minifier['fileSuffix'].to_s
         end
 
         output = ''
@@ -55,45 +47,35 @@ module Awestruct
           ext_txt = ext[1..-1]
 
           # Filtering out non-css files and those which were already minimized with added suffix.
-          if ext_txt == "js" and ( fileSuffix.nil? or !page.output_path.to_s.end_with?(fileSuffix+".js") )
+          if ext_txt == "js" and !page.output_path.to_s.end_with?("min.js")
             print "Minifying javascript #{page.output_path} \n"
             output = Uglifier.new.compile(input)
-            #print "+++++ CONTENT FOR "+File.basename(page.output_path).to_s+" +++++++"
-            #print inp
           else
             return input
           end
 
         end
 
-        # Depending whether file suffix was given we create a new file or minimize in place.
-        if fileSuffix.nil?
+        oldFileName = File.basename(page.output_path).to_s
 
-          return output
+        # Create new file name with suffix added
+        newFileName = oldFileName.slice(0..oldFileName.length-3)+"min.js"
+        newOutputPath = File.join(File.dirname(page.output_path.to_s),newFileName)
 
-        else
+        # Create a temporary file with the merged content.
+        tmpOutputPath = File.join( "./_tmp/" , newFileName)
+        tmpOutputFile = File.new(tmpOutputPath,"w")
+        tmpOutputFile.write(output)
+        tmpOutputFile.close
 
-          oldFileName = File.basename(page.output_path).to_s
+        # Add the temporary file to the list of pages for rendering phase.
+        newPage = site.engine.load_page(tmpOutputPath)
+        newPage.source_path = tmpOutputPath
+        newPage.output_path = newOutputPath
+        site.pages << newPage
 
-          # Create new file name with suffix added
-          newFileName = oldFileName.slice(0..oldFileName.length-3)+fileSuffix+".js"
-          newOutputPath = File.join(File.dirname(page.output_path.to_s),newFileName)
-
-          # Create a temporary file with the merged content.
-          tmpOutputPath = File.join( "./_tmp/" , newFileName)
-          tmpOutputFile = File.new(tmpOutputPath,"w")
-          tmpOutputFile.write(output)
-          tmpOutputFile.close
-
-          # Add the temporary file to the list of pages for rendering phase.
-          newPage = site.engine.load_page(tmpOutputPath)
-          newPage.source_path = tmpOutputPath
-          newPage.output_path = newOutputPath
-          site.pages << newPage
-
-          # We return the input because we leave the original file untouched
-          input
-        end
+        # We return the input because we leave the original file untouched
+        input
       end
     end
   end
