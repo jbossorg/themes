@@ -131,12 +131,3 @@ body {
 		font-size: 14px;
 	}
 }
-
-/*  Fix to remove up arrow from dropdown balloon shown in nav-collapse. Fixed in bootstrap-sass 2.1.1.0 
--------------------------------------------------- */
-.nav-collapse .nav > li > .dropdown-menu {
-	&:before,
-	&:after {
-		display: none;
-	}
-}
