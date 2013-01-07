@@ -4,36 +4,31 @@ style: default
 title: Community driven open source middleware
 ---
 / Main hero unit for a primary marketing message or call to action
-.hero-unit
-	%p Simple, modern, productive.
-	%h1 the JBoss Way
-	%p<
-		%a.btn.btn-primary.btn-large GET STARTED
 
-/ Spotlights
+.carousel.slide#myCarousel
+	.carousel-inner
+		.item.active
+			%a(href="#")
+				%img(src="#{site.theme_images_url}/community/homespot_1.png" alt="Slideshow Image")
+		.item
+			%a(href="#")
+				%img(src="#{site.theme_images_url}/community/homespot_2.png" alt="Slideshow Image")
+		.item
+			%a(href="#")
+				%img(src="#{site.theme_images_url}/community/homespot_3.png" alt="Slideshow Image")
+			
+	%a.carousel-control.left(href="#myCarousel" data-slide="prev")& &lsaquo;
+	%a.carousel-control.right(href="#myCarousel" data-slide="next")& &rsaquo;
+
+/ Example row of 3 columns
 .row
 	.span4
-		%p<
-			%a(href="#")
-				%img(src="https://www.jboss.org/dms/content/singular/3spot-1.png")
-	.span4
-		%p<
-			%a(href="#")
-				%img(src="https://www.jboss.org/dms/content/singular/3spot-2.png")
-	.span4
-		%p<
-			%a(href="#")
-				%img(src="https://www.jboss.org/dms/content/singular/3spot-3.png")
-
-/ Example row of columns
-.row
-	.span4
-		%h2 Latest Blogs
+		%h2 Blogs
 		%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
 		%p<
 			%a.btn(href="#") More blogs &raquo;
 	.span4
-		%h2 Social Stream
+		%h2 Tweets
 		%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
 		%p<
 			%a.btn(href="#") More tweets &raquo;
@@ -44,3 +39,17 @@ title: Community driven open source middleware
 			%a.btn(href="#") More events &raquo;
 
 %hr
+/ Example row of 4 columns
+.row
+	.span3
+		%h4 Title
+		%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+	.span3
+		%h4 Title
+		%p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+	.span3
+		%h4 Title
+		%p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+	.span3
+		%h4 Title
+		%p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.

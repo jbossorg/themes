@@ -1,0 +1,57 @@
+!!! 5
+%html(lang="en")
+	%head
+		%meta(charset="utf-8")
+		%meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		%meta(name="description" content="JBoss Community themes for Twitter Bootstrap.")
+		%title #{page.title} || #{site.defaults.title}
+
+		/[if lt IE 9]
+			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+		%link(href="#{site.base_url}/stylesheets/bootstrap-#{page.style}.css" rel="stylesheet")
+
+	%body
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					%a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					.nav-collapse.collapse
+						%ul.nav
+							%li<
+								%a(href="#{site.base_url}/index.html") Home
+							%li<
+								%a(href="getStarted.html") Get Started
+							%li<
+								%a(href="extend.html") Extend
+							%li.dropdown
+								%a.dropdown-toggle(data-toggle="dropdown" href="#")<
+									=precede 'Gallery ' do
+										%b.caret>
+								%ul.dropdown-menu
+									%li<
+										%a(href="#{site.base_url}/default/swatch.html") Default
+									%li.divider
+									%li<
+										%a(href="#{site.base_url}/community/swatch.html") Community
+
+						%ul.nav.pull-right
+							%li<
+								%a(rel="tooltip" target="_blank" href="http://twitter.github.com/bootstrap" title="Bootstrap")<
+									Built With Bootstrap
+
+		.container(style="padding-top: 60px;")
+			~ content
+
+		.company
+			%a(href="http://www.redhat.com/")<
+				%img(src="#{site.theme_images_url}/common/redhat_logo.png")
+
+
+		/ ==========================JavaScript========================
+		/ Placed at the end of the document so the pages load faster
+		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery#{site.minified}.js")
+		%script(src="#{site.theme_js_url}/bootstrap-community.js")
