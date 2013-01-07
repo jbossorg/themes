@@ -10,6 +10,7 @@
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
 		%link(href="#{site.base_url}/stylesheets/bootstrap-#{page.style}.css" rel="stylesheet")
+		
 
 	%body
 		.navbar.navbar-fixed-top
@@ -43,7 +44,7 @@
 								%a(rel="tooltip" target="_blank" href="http://twitter.github.com/bootstrap" title="Bootstrap")<
 									Built With Bootstrap
 
-		.container(style="padding-top: 60px;")
+		.container(style="padding-top: 110px;")
 			~ content
 
 		.company
@@ -54,4 +55,5 @@
 		/ ==========================JavaScript========================
 		/ Placed at the end of the document so the pages load faster
 		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery#{site.minified}.js")
+		%script(src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js")
 		%script(src="#{site.theme_js_url}/bootstrap-community.js")
