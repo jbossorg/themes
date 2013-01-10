@@ -6,7 +6,7 @@ js_minifier: disabled
 html_minifier: disabled
 
 theme_css_url: /stylesheets
-theme_js_url: /javascripts
+theme_js_url: /theme/js
 theme_fonts_url: /theme/fonts
 theme_images_url: /theme/images
 
@@ -14,7 +14,7 @@ minified: .min
 
 fileMerger:
   enabled: true
-  outputFilePath: /javascripts/bootstrap-community.js
+  outputFilePath: /theme/js/libs/bootstrap/2.2.2.0.0/bootstrap-community.js
   paths:
     - /javascripts/_bootstrap-transition.js
     - /javascripts/_bootstrap-alert.js
@@ -45,8 +45,9 @@ wget:
     - --reject 'index.html*'
     - -e robots=off
   urls:
-    - http://static-stg.jboss.org/theme/css/bootstrap/2.1.0.0.0/bootstrap-community.css
-    - http://static-stg.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0/bootstrap-community.js
+    - http://static-stg.jboss.org/theme/css/bootstrap/2.2.2.0.0/bootstrap-community.css
+    - http://static-stg.jboss.org/theme/js/libs/bootstrap/2.2.2.0.0/bootstrap-community.js
+    - http://static-stg.jboss.org/theme/js/libs/holder/1.9/holder.js
     - http://static-stg.jboss.org/theme/fonts/titilliumtext/
     - http://static-stg.jboss.org/theme/images/common/
     - http://static-stg.jboss.org/theme/images/community/
@@ -56,13 +57,13 @@ profiles:
   development:
     minified:
   staging:
-    theme_css_url: http://static-stg.jboss.org/theme/css/bootstrap/2.1.0.0.0
-    theme_js_url: http://static-stg.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0
+    theme_css_url: http://static-stg.jboss.org/theme/css
+    theme_js_url: http://static-stg.jboss.org/theme/js
     theme_fonts_url: http://static-stg.jboss.org/theme/fonts
     theme_images_url: http://static-stg.jboss.org/theme/images
   production:
-    base_url: http://design.jbossorg/boostrap/themes
-    theme_css_url: http://static.jboss.org/theme/css/bootstrap/2.1.0.0.0
-    theme_js_url: http://static.jboss.org/theme/js/libs/bootstrap/2.1.0.0.0
+    theme_css_url: http://static.jboss.org/theme/css
+    theme_js_url: http://static.jboss.org/theme/js
     theme_fonts_url: http://static.jboss.org/theme/fonts
     theme_images_url: http://static.jboss.org/theme/images
+    base_url: http://design.jbossorg/boostrap/themes

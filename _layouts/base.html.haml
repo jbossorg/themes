@@ -4,12 +4,12 @@
 		%meta(charset="utf-8")
 		%meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		%meta(name="description" content="JBoss Community themes for Twitter Bootstrap.")
-		%title #{page.title} || #{site.defaults.title}
+		%title #{page.title} · #{site.defaults.title}
 
 		/[if lt IE 9]
 			%script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-		%link(href="#{site.base_url}/stylesheets/bootstrap-#{page.style}.css" rel="stylesheet")
+		%link(href="#{site.theme_css_url}/bootstrap/2.2.2.0.0/bootstrap-#{page.style}.css" rel="stylesheet" media="screen")
 		
 	%body(data-target=".bs-docs-sidebar" data-spy="scroll" data-twttr-rendered="true")
 		.navbar.navbar-fixed-top
@@ -55,4 +55,6 @@
 		/ Placed at the end of the document so the pages load faster
 		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery#{site.minified}.js")
 		%script(src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js")
-		%script(src="#{site.theme_js_url}/bootstrap-community.js")
+		%script(src="#{site.theme_js_url}/libs/holder/1.9/holder.js")
+		%script Holder.add_theme("community", { background: "#eee", foreground: "#aaa", size: 12 })
+		%script(src="#{site.theme_js_url}/libs/bootstrap/2.2.2.0.0/bootstrap-community.js")
