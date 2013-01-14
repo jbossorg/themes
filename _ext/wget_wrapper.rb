@@ -56,13 +56,31 @@ module Awestruct
 
         command = "wget "
 
+
+        
+        noHostDirectories = false
+        directoryPrefix = ""
+
         # Getting 'options' from configuration
         options = site.wget['options']
         optionsStr = ''
         if !options.nil?
 
           options.each do |option|
-            command += " "+option.to_s
+
+            opStr = option.to_s.strip
+
+            # Checking if -nH or --no-host-directories was specified.
+            if (opStr.eql?("-nH") or opStr.eql?("--no-host-directories"))
+              noHostDirectories = true
+            end
+
+            # Checking if -P or --directory-prefix was specified.
+            if (opStr.start_with?("-P") or opStr.start_with?("--directory-prefix"))
+              directoryPrefix = opStr.split(/=|\s/,2)[1].strip
+            end
+
+            command += " "+opStr
           end
 
         end
@@ -73,18 +91,33 @@ module Awestruct
         # Paths for .gitignore files
         directories = Array.new
 
+        # If there is directory prefix defined then we know where should we search for downloaded files.
+        if (createGitIgnoreFiles and !directoryPrefix.eql?(""))
+          directories.push(directoryPrefix)
+        end
+
         # Iterate over each defined url, add up all of them and collect root paths for .gitignore files.
         urlsStr = ''
         urls.each do |url|
           urlsStr += " "+url.to_s
 
-          if (createGitIgnoreFiles)
+          if (createGitIgnoreFiles and directoryPrefix.eql?(""))
 
             uri = URI(url)
-            path = uri.path
-            splitPath = path.to_s.split("/")
-            if (splitPath.size>0 and !directories.include?(splitPath[1].to_s))
-              directories.push(splitPath[1].to_s)
+
+            transformedPath=""
+            # If --no-host-directories or -nH option was specified for wget.
+            if (noHostDirectories)
+              path = uri.path
+              splitPath = path.to_s.split("/")
+              next if splitPath.size == 0
+              transformedPath=splitPath[1].to_s
+            else
+              transformedPath=uri.host+uri.path
+            end
+
+            if (!directories.include?(transformedPath))
+              directories.push(transformedPath)
             end
           end
 
@@ -155,8 +188,12 @@ module Awestruct
           # Removing '.' from the beginning of the path.
           noDotPath = entry.to_s.slice(1..entry.to_s.length-1)
 
-          # Omiting files that are already scheduled for rendering or start with a '.'
-          next if pathnames.include?(noDotPath) or entry.basename.to_s.start_with?('.')
+          # Searching if files are already scheduled for rendering
+          found = false
+          pathnames.each { |path| if path.end_with?(noDotPath) then found=true ; break; end }
+
+          # Depending whether it's a scheduled file or start with a '.', we skip to the next iteration.
+          next if found or entry.basename.to_s.start_with?('.')
 
           # Adding file to rendered pages.
           pathnames.push(noDotPath)
