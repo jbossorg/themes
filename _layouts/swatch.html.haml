@@ -50,7 +50,7 @@ layout: base
 				\
 				795 Folsom Ave, Suite 600<br/>
 				San Francisco, CA 94107<br/>
-				=succeed ' (123) 456-7890' do
+				= succeed ' (123) 456-7890' do
 					%abbr(title="Phone") P:
 			%address
 				%strong Full Name
@@ -83,7 +83,7 @@ layout: base
 							%a(href="#") Link
 						%li.dropdown
 							%a.dropdown-toggle(href="#" data-toggle="dropdown")<
-								=precede 'Dropdown ' do
+								= precede 'Dropdown ' do
 									%b.caret>
 							%ul.dropdown-menu
 								%li<
@@ -105,7 +105,7 @@ layout: base
 						%li.divider-vertical
 						%li.dropdown
 							%a.dropdown-toggle(href="#" data-toggle="dropdown")<
-								=precede 'Dropdown ' do
+								= precede 'Dropdown ' do
 									%b.caret>
 							%ul.dropdown-menu
 								%li<
@@ -137,7 +137,7 @@ layout: base
 							%a(href="#") Link
 						%li.dropdown
 							%a.dropdown-toggle(href="#" data-toggle="dropdown")<
-								=precede 'Dropdown ' do
+								= precede 'Dropdown ' do
 									%b.caret>
 							%ul.dropdown-menu
 								%li<
@@ -159,7 +159,7 @@ layout: base
 						%li.divider-vertical
 						%li.dropdown
 							%a.dropdown-toggle(href="#" data-toggle="dropdown")<
-								=precede 'Dropdown ' do
+								= precede 'Dropdown ' do
 									%b.caret>
 							%ul.dropdown-menu
 								%li<
@@ -198,7 +198,7 @@ layout: base
 					%a.btn.disabled(href="#") Default
 				%td<
 					%a.btn(href="#")<
-						=succeed ' Default' do
+						= succeed ' Default' do
 							%i.icon-cog>
 				%td
 					.btn-group
@@ -226,7 +226,7 @@ layout: base
 					%a.btn.btn-primary.disabled(href="#") Primary
 				%td<
 					%a.btn.btn-primary(href="#")<
-						=succeed ' Primary' do
+						= succeed ' Primary' do
 							%i.icon-shopping-cart.icon-white>
 				%td
 					.btn-group
@@ -254,7 +254,7 @@ layout: base
 					%a.btn.btn-info.disabled(href="#") Info
 				%td<
 					%a.btn.btn-info(href="#")<
-						=succeed ' Info' do
+						= succeed ' Info' do
 							%i.icon-exclamation-sign.icon-white>
 				%td
 					.btn-group
@@ -282,7 +282,7 @@ layout: base
 					%a.btn.btn-success.disabled(href="#") Success
 				%td<
 					%a.btn.btn-success(href="#")<
-						=succeed ' Success' do
+						= succeed ' Success' do
 							%i.icon-ok.icon-white>
 				%td
 					.btn-group
@@ -310,7 +310,7 @@ layout: base
 					%a.btn.btn-warning.disabled(href="#") Warning
 				%td<
 					%a.btn.btn-warning(href="#")<
-						=succeed ' Warning' do
+						= succeed ' Warning' do
 							%i.icon-warning-sign.icon-white>
 				%td
 					.btn-group
@@ -338,7 +338,7 @@ layout: base
 					%a.btn.btn-danger.disabled(href="#") Danger
 				%td<
 					%a.btn.btn-danger(href="#")<
-						=succeed ' Danger' do
+						= succeed ' Danger' do
 							%i.icon-remove.icon-white>
 				%td
 					.btn-group
@@ -366,7 +366,7 @@ layout: base
 					%a.btn.btn-inverse.disabled(href="#") Inverse
 				%td<
 					%a.btn.btn-inverse(href="#")<
-						=succeed ' Inverse' do
+						= succeed ' Inverse' do
 							%i.icon-random.icon-white>
 				%td
 					.btn-group
@@ -500,17 +500,17 @@ layout: base
 			%ul.breadcrumb
 				%li<
 					%a(href="#")> Home
-					=precede ' ' do
+					= precede ' ' do
 						%span.divider /
 				%li.active Library
 			%ul.breadcrumb
 				%li<
 					%a(href="#")> Home
-					=precede ' ' do
+					= precede ' ' do
 						%span.divider /
 				%li<
 					%a(href="#")> Library
-					=precede ' ' do
+					= precede ' ' do
 						%span.divider /
 				%li.active Data
 
