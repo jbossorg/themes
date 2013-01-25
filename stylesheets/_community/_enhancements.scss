@@ -2,6 +2,7 @@
 
 html {
 	background: $bodyBackground;
+	height: 100%;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdc4cf', endColorstr='$bodyBackground', GradientType=0 ); /* IE 6-9 */
   background-position: 0 0;
 	background-repeat: no-repeat;
+	height: 100%;
 }
 
 /* Branding and Prime navbar

@@ -75,10 +75,33 @@
 	z-index: 1000;
 }
 
-/* ------------------ Company logo ------------------------- */
-.company {
+/* -------Main Content (modified for sticky company footer) ------ */
+#content {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent company footer by it's height */
+	margin: 0 auto -70px;
+	background-color: white;
+}
+
+#companyfooter-placeholder {
+	height: 70px;
+}
+
+/* ------------------ Company Footer ------------------------- */
+#companyfooter {
+	height: 70px;
+	background-color: #f3f3f3;
+}
+			
+.redhatlogo {
 	width: 76px;
-	margin: 10px auto;
+	margin: auto;
+}
+
+#logospacer {
+	height: 20px;
 }
 
 /* ------------------ Fonts ------------------------- */
