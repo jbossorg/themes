@@ -4,3 +4,6 @@ _site
 .sass-cache
 *.DS_Store
 images/
+.settings
+.project
+.buildpath
