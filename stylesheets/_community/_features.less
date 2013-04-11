@@ -65,7 +65,7 @@
 }
 
 .taglinedark {
-	color: $grayDark;
+	color: @grayDark;
 }
 
 .tab {
@@ -205,7 +205,6 @@ hr.soften {
 /* -----------------------Sidenav for Docs--------------------------- */
 .bs-docs-sidenav {
 	width: 228px;
-	min-height: 1px; /* This has to be here to keep the 'column' from collapsing */
 	margin: 30px 0 0;
 	padding: 0;
 	background-color: #fff;
@@ -266,7 +265,7 @@ hr.soften {
 
 .bs-docs-sidenav .active .icon-chevron-right,
 .bs-docs-sidenav .active a:hover .icon-chevron-right {
-	background-image: url($iconSpritePath);
+	background-image: url(@iconSpritePath);
 	opacity: 1;
 }
 
@@ -358,17 +357,17 @@ hr.soften {
 /* --------------- JBoss Badge ---------------------  */  
 
 .jbossbadge  {
-	border: 1px solid $grayLighter;
+	border: 1px solid @grayLighter;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	background: $white; /* Old browsers */
-	background: -moz-linear-gradient(top, $grayLighter 0%, $white 20%, $white 80%, $grayLighter 100%); /* FF 3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $grayLighter), color-stop(20%, $white), color-stop(80%, $white), 100%, $grayLighter); /* Chrome, Safari 4+ */
-	background: -webkit-linear-gradient(top, $grayLighter 0%, $white 20%,$white 80%, $grayLighter 100%); /* Chrome 10+, Safari 5.1+ */
-	background: -o-linear-gradient(top, $grayLighter 0%, $white 20%, $white 80%, $grayLighter 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, $grayLighter 0%, $white 20%, $white 80%, $grayLighter 100%); /* IE 10+ */
-	background: linear-gradient(to bottom,  $grayLighter 0%, $white 20%, $white 80%, $grayLighter 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$grayLighter', endColorstr='$white', GradientType=0 ); /* IE 6-9 */
+	background: @white; /* Old browsers */
+	background: -moz-linear-gradient(top, @grayLighter 0%, @white 20%, @white 80%, @grayLighter 100%); /* FF 3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @grayLighter), color-stop(20%, @white), color-stop(80%, @white), 100%, @grayLighter); /* Chrome, Safari 4+ */
+	background: -webkit-linear-gradient(top, @grayLighter 0%, @white 20%,@white 80%, @grayLighter 100%); /* Chrome 10+, Safari 5.1+ */
+	background: -o-linear-gradient(top, @grayLighter 0%, @white 20%, @white 80%, @grayLighter 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @grayLighter 0%, @white 20%, @white 80%, @grayLighter 100%); /* IE 10+ */
+	background: linear-gradient(to bottom,  @grayLighter 0%, @white 20%, @white 80%, @grayLighter 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@grayLighter', endColorstr='@white', GradientType=0 ); /* IE 6-9 */
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	padding: 20px;
