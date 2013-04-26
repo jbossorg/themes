@@ -11,7 +11,8 @@
 		/[if lt IE 9]
 			%script(src="#{site.jborg_js_url}/libs/html5/pre3.6/html5.min.js")
 
-		%link(href="#{site.bootstrap_css_url}/bootstrap-#{page.style}#{site.minified}.css" rel="stylesheet" media="screen")
+		- pageStyle = page.style ;
+		%link(href="#{pageStyle ? site[pageStyle].bootstrap_css_url : site.bootstrap_css_url}#{site.minified}.css" rel="stylesheet" media="screen")
 		
 	%body(data-spy="scroll" data-target=".bs-docs-sidebar")
 		.navbar.navbar-fixed-top
@@ -52,8 +53,8 @@
 			%a(href="http://www.redhat.com/")<
 				%img(src="#{site.jborg_images_url}/common/redhat_logo.png")
 
-		%script(src="#{site.jborg_js_url}/libs/jquery/1.8.1/jquery#{site.minified}.js")
+		%script(src="#{site.jborg_js_url}/libs/jquery/1.9.1/jquery#{site.minified}.js")
 		%script(src="#{site.jborg_js_url}/libs/prettify/188.0.0/prettify.min.js")
 		%script(src="#{site.jborg_js_url}/libs/holder/1.9/holder.js")
 		%script Holder.add_theme("community", { background: "#eee", foreground: "#aaa", size: 12 })
-		%script(src="#{site.bootstrap_js_url}/bootstrap-community#{site.minified}.js")
+		%script(src="#{pageStyle ? site[pageStyle].bootstrap_js_url : site.bootstrap_js_url}#{site.minified}.js")
